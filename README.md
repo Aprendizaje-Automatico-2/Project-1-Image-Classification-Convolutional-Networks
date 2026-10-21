@@ -16,6 +16,8 @@ Detecta automáticamente NVIDIA CUDA, AMD ROCm, Apple Silicon (MPS), Intel XPU o
 ```bash
 python -m fishcls preparar         # agrupa casi duplicados, divide 70/15/15 por grupos y redimensiona a 300×400
 python -m fishcls ver-aumentado    # figuras del data augmentation en resultados/figuras/
+python -m fishcls entrenar configuraciones/cnn/C01_base.json   # uno o varios experimentos
+python -m fishcls comparar C00_sin_aumentado C01_base --titulo "Con y sin DA" --salida comparativa
 python -m unittest discover tests
 ```
 
@@ -33,6 +35,13 @@ fishcls/
   utilidades.py   dispositivo, semillas, JSON
   datos.py        catálogo, agrupado, partición, preparación y DataLoaders
   aumentado.py    transformaciones de entrenamiento y evaluación
+  modelos.py      ConvNet configurable (parte de la red de la asignatura)
+  entrenamiento.py  ParadaTemprana, bucle de entrenamiento y validación
+  evaluacion.py   métricas y classification report
+  experimento.py  configuración → datos → modelo → entrenamiento → resultados
   graficas.py     figuras
+configuraciones/  un JSON por experimento, solo con lo que cambia respecto a los valores por defecto
 tests/            unittest
 ```
+
+Cada experimento guarda en `resultados/experimentos/<nombre>/` su configuración, su historial por época, sus métricas, el mejor modelo, las curvas de pérdida y accuracy y la matriz de confusión de validación. `resultados/resumen.csv` acumula una fila por experimento.

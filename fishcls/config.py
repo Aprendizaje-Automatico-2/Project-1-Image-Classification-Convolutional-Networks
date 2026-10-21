@@ -5,7 +5,9 @@ RAIZ = Path(__file__).resolve().parent.parent
 DATOS_ORIGINALES = RAIZ / "data" / "Fish_Dataset"
 DATOS_PREPARADOS = RAIZ / "data" / "preparados"
 PARTICION = RAIZ / "particion.json"
+CONFIGURACIONES = RAIZ / "configuraciones"
 EXPERIMENTOS = RAIZ / "resultados" / "experimentos"
+RESUMEN_EXPERIMENTOS = RAIZ / "resultados" / "resumen.csv"
 FIGURAS = RAIZ / "resultados" / "figuras"
 
 SEMILLA = 42

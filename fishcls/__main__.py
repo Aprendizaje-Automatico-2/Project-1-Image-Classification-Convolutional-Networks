@@ -1,12 +1,14 @@
 import argparse
 import platform
+from pathlib import Path
 
 import torch
 import torchvision
 
 from fishcls.config import DATOS_PREPARADOS, SEMILLA, TAMANO_CNN
 from fishcls.datos import abrir_imagen, crear_dataloaders, listar_imagenes, preparar_dataset, resumir_particion
-from fishcls.graficas import galeria_aumentado, guardar_figura, lote_de_ejemplo
+from fishcls.experimento import cargar_configuracion, cargar_historial, ejecutar_experimento
+from fishcls.graficas import comparar_historiales, galeria_aumentado, guardar_figura, lote_de_ejemplo
 from fishcls.utilidades import describir_dispositivo, fijar_semilla, obtener_dispositivo
 
 
@@ -33,12 +35,30 @@ def ver_aumentado(_: argparse.Namespace) -> None:
     print(guardar_figura(lote_de_ejemplo(imagenes, etiquetas, datos.clases), "aumentado_lote.png"))
 
 
+def entrenar(argumentos: argparse.Namespace) -> None:
+    for ruta in argumentos.configuraciones:
+        print(ejecutar_experimento(cargar_configuracion(ruta)))
+
+
+def comparar(argumentos: argparse.Namespace) -> None:
+    historiales = {nombre: cargar_historial(nombre) for nombre in argumentos.experimentos}
+    print(guardar_figura(comparar_historiales(historiales, argumentos.titulo), f"{argumentos.salida}.png"))
+
+
 def construir_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="fishcls")
     comandos = parser.add_subparsers(dest="comando", required=True)
     comandos.add_parser("info", help="versiones y dispositivo").set_defaults(ejecutar=mostrar_info)
     comandos.add_parser("preparar", help="agrupa, divide y redimensiona el dataset").set_defaults(ejecutar=preparar)
     comandos.add_parser("ver-aumentado", help="figuras del data augmentation").set_defaults(ejecutar=ver_aumentado)
+    entrenar_parser = comandos.add_parser("entrenar", help="ejecuta uno o varios experimentos")
+    entrenar_parser.add_argument("configuraciones", nargs="+", type=Path)
+    entrenar_parser.set_defaults(ejecutar=entrenar)
+    comparar_parser = comandos.add_parser("comparar", help="superpone las curvas de varios experimentos")
+    comparar_parser.add_argument("experimentos", nargs="+")
+    comparar_parser.add_argument("--titulo", required=True)
+    comparar_parser.add_argument("--salida", required=True)
+    comparar_parser.set_defaults(ejecutar=comparar)
     return parser
 
 

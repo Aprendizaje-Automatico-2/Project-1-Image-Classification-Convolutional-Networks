@@ -1,0 +1,92 @@
+import copy
+from time import time
+
+import numpy as np
+import torch
+import torch.nn as nn
+from sklearn.metrics import accuracy_score
+from torch.utils.data import DataLoader
+
+METRICAS_HISTORIAL = ("perdida_train", "perdida_val", "acc_train", "acc_val")
+
+
+class ParadaTemprana:
+    def __init__(self, paciencia: int):
+        self.paciencia = paciencia
+        self.mejor_perdida_val = float("inf")
+        self.mejor_epoca = 0
+        self.mejor_estado = None
+        self.epocas_sin_mejora = 0
+
+    def __call__(self, perdida_val: float, modelo: nn.Module, epoca: int) -> bool:
+        if perdida_val < self.mejor_perdida_val:
+            self.mejor_perdida_val = perdida_val
+            self.mejor_epoca = epoca
+            self.mejor_estado = copy.deepcopy(modelo.state_dict())
+            self.epocas_sin_mejora = 0
+        else:
+            self.epocas_sin_mejora += 1
+        return self.epocas_sin_mejora >= self.paciencia
+
+
+def ejecutar_epoca(
+    modelo: nn.Module,
+    loader: DataLoader,
+    funcion_perdida: nn.Module,
+    dispositivo: torch.device,
+    optimizador: torch.optim.Optimizer | None = None,
+) -> tuple[float, np.ndarray, np.ndarray]:
+    entrenando = optimizador is not None
+    modelo.train(entrenando)
+    perdida_total = 0.0
+    y_real, y_pred = [], []
+    with torch.set_grad_enabled(entrenando):
+        for imagenes, etiquetas in loader:
+            imagenes, etiquetas = imagenes.to(dispositivo), etiquetas.to(dispositivo)
+            predicciones = modelo(imagenes)
+            perdida = funcion_perdida(predicciones, etiquetas)
+            if entrenando:
+                optimizador.zero_grad()
+                perdida.backward()
+                optimizador.step()
+            perdida_total += perdida.item()
+            y_pred.append(predicciones.argmax(dim=1).cpu().numpy())
+            y_real.append(etiquetas.cpu().numpy())
+    return perdida_total / len(loader), np.concatenate(y_real), np.concatenate(y_pred)
+
+
+def entrenar(
+    modelo: nn.Module,
+    loader_train: DataLoader,
+    loader_val: DataLoader,
+    optimizador: torch.optim.Optimizer,
+    funcion_perdida: nn.Module,
+    parada: ParadaTemprana,
+    dispositivo: torch.device,
+    epocas: int,
+) -> dict[str, list[float]]:
+    historial = {metrica: [] for metrica in METRICAS_HISTORIAL}
+    for epoca in range(1, epocas + 1):
+        comienzo = time()
+        perdida_train, y_real_train, y_pred_train = ejecutar_epoca(
+            modelo, loader_train, funcion_perdida, dispositivo, optimizador
+        )
+        perdida_val, y_real_val, y_pred_val = ejecutar_epoca(modelo, loader_val, funcion_perdida, dispositivo)
+        historial["perdida_train"].append(perdida_train)
+        historial["perdida_val"].append(perdida_val)
+        historial["acc_train"].append(accuracy_score(y_real_train, y_pred_train))
+        historial["acc_val"].append(accuracy_score(y_real_val, y_pred_val))
+        detener = parada(perdida_val, modelo, epoca)
+        estado = "mejora" if parada.mejor_epoca == epoca else f"sin mejora {parada.epocas_sin_mejora}/{parada.paciencia}"
+        print(
+            f"Época [{epoca:3d}/{epocas}] | "
+            f"Train Loss: {perdida_train:.4f} | Train Acc: {historial['acc_train'][-1]:.4f} | "
+            f"Val Loss: {perdida_val:.4f} | Val Acc: {historial['acc_val'][-1]:.4f} | "
+            f"{estado} | {time() - comienzo:.1f}s"
+        )
+        if detener:
+            print(f"Parada temprana en la época {epoca}: la mejor fue la {parada.mejor_epoca} "
+                  f"(Val Loss: {parada.mejor_perdida_val:.4f})")
+            break
+    modelo.load_state_dict(parada.mejor_estado)
+    return historial
