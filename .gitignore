@@ -1,0 +1,12 @@
+data/
+.idea/
+*.pdf
+*.m
+*.txt
+!requirements.txt
+runs/
+__pycache__/
+.DS_Store
+*.pt
+*.md
+*.pdf
