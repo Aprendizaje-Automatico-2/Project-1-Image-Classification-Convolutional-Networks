@@ -1,0 +1,3202 @@
+[
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00001.png",
+    "preparada": "data/preparados/validacion/Black Sea Sprat/00001.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 0,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00002.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00002.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 1,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00003.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00003.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 2,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00004.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00004.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 3,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00005.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00005.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 4,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00006.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00006.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 5,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00007.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00007.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 6,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00008.png",
+    "preparada": "data/preparados/validacion/Black Sea Sprat/00008.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 7,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00009.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00009.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 8,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00010.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00010.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 9,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00011.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00011.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 10,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00012.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00012.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 11,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00013.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00013.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 12,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00014.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00014.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 13,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00015.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00015.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 14,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00016.png",
+    "preparada": "data/preparados/test/Black Sea Sprat/00016.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 15,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00017.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00017.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 16,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00018.png",
+    "preparada": "data/preparados/test/Black Sea Sprat/00018.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 17,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00019.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00019.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 18,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00020.png",
+    "preparada": "data/preparados/validacion/Black Sea Sprat/00020.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 19,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00021.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00021.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 20,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00022.png",
+    "preparada": "data/preparados/test/Black Sea Sprat/00022.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 21,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00023.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00023.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 22,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00024.png",
+    "preparada": "data/preparados/test/Black Sea Sprat/00024.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 23,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00025.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00025.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 24,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00026.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00026.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 25,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00027.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00027.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 26,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00028.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00028.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 27,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00029.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00029.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 28,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00030.png",
+    "preparada": "data/preparados/validacion/Black Sea Sprat/00030.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 29,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00031.png",
+    "preparada": "data/preparados/validacion/Black Sea Sprat/00031.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 30,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00032.png",
+    "preparada": "data/preparados/test/Black Sea Sprat/00032.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 31,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00033.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00033.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 32,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00034.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00034.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 33,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00035.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00035.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 34,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00036.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00036.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 35,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00037.png",
+    "preparada": "data/preparados/validacion/Black Sea Sprat/00037.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 36,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00038.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00038.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 37,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00039.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00039.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 38,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00040.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00040.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 39,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00041.png",
+    "preparada": "data/preparados/validacion/Black Sea Sprat/00041.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 40,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00042.png",
+    "preparada": "data/preparados/test/Black Sea Sprat/00042.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 41,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00043.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00043.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 42,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00044.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00044.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 43,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00045.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00045.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 44,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00046.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00046.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 45,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00047.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00047.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 46,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00048.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00048.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 47,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00049.png",
+    "preparada": "data/preparados/test/Black Sea Sprat/00049.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 48,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Black Sea Sprat/00050.png",
+    "preparada": "data/preparados/entrenamiento/Black Sea Sprat/00050.jpg",
+    "clase": "Black Sea Sprat",
+    "grupo": 49,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/1.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/1.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 50,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/10.JPG",
+    "preparada": "data/preparados/validacion/Gilt Head Bream/10.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 51,
+    "particion": "validacion",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/11.JPG",
+    "preparada": "data/preparados/validacion/Gilt Head Bream/11.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 52,
+    "particion": "validacion",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/12.JPG",
+    "preparada": "data/preparados/test/Gilt Head Bream/12.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 53,
+    "particion": "test",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/13.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/13.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 54,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/14.JPG",
+    "preparada": "data/preparados/test/Gilt Head Bream/14.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 55,
+    "particion": "test",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/15.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/15.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 56,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/16.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/16.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 57,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/17.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/17.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 58,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/18.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/18.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 59,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/19.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/19.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 60,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/2.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/2.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 61,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/20.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/20.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 62,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/21.png",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/21.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 63,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/22.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/22.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 64,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/23.JPG",
+    "preparada": "data/preparados/validacion/Gilt Head Bream/23.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 65,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/24.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/24.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 66,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/25.JPG",
+    "preparada": "data/preparados/test/Gilt Head Bream/25.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 67,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/26.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/26.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 68,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/27.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/27.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 69,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/28.JPG",
+    "preparada": "data/preparados/test/Gilt Head Bream/28.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 70,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/29.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/29.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 63,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/3.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/3.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 71,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/30.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/30.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 72,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/31.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/31.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 73,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/32.JPG",
+    "preparada": "data/preparados/test/Gilt Head Bream/32.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 74,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/33.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/33.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 75,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/34.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/34.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 76,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/35.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/35.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 77,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/36.JPG",
+    "preparada": "data/preparados/validacion/Gilt Head Bream/36.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 78,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/37.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/37.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 79,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/38.JPG",
+    "preparada": "data/preparados/test/Gilt Head Bream/38.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 80,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/39.JPG",
+    "preparada": "data/preparados/test/Gilt Head Bream/39.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 81,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/4.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/4.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 82,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/40.JPG",
+    "preparada": "data/preparados/validacion/Gilt Head Bream/40.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 83,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/41.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/41.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 84,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/42.JPG",
+    "preparada": "data/preparados/validacion/Gilt Head Bream/42.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 85,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/43.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/43.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 86,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/44.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/44.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 87,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/45.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/45.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 88,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/46.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/46.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 89,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/47.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/47.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 90,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/48.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/48.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 91,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/49.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/49.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 92,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/5.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/5.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 93,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/50.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/50.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 94,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/6.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/6.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 95,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/7.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/7.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 96,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/8.JPG",
+    "preparada": "data/preparados/validacion/Gilt Head Bream/8.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 97,
+    "particion": "validacion",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Gilt Head Bream/9.JPG",
+    "preparada": "data/preparados/entrenamiento/Gilt Head Bream/9.jpg",
+    "clase": "Gilt Head Bream",
+    "grupo": 98,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00001.png",
+    "preparada": "data/preparados/test/Horse Mackerel/00001.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 99,
+    "particion": "test",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00002.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00002.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 100,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00003.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00003.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 101,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00004.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00004.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 102,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00005.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00005.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 103,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00006.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00006.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 104,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00007.png",
+    "preparada": "data/preparados/test/Horse Mackerel/00007.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 105,
+    "particion": "test",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00008.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00008.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 106,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00009.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00009.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 107,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00010.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00010.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 108,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00011.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00011.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 109,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00012.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00012.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 110,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00013.png",
+    "preparada": "data/preparados/validacion/Horse Mackerel/00013.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 111,
+    "particion": "validacion",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00014.png",
+    "preparada": "data/preparados/test/Horse Mackerel/00014.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 112,
+    "particion": "test",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00015.png",
+    "preparada": "data/preparados/validacion/Horse Mackerel/00015.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 113,
+    "particion": "validacion",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00016.png",
+    "preparada": "data/preparados/test/Horse Mackerel/00016.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 114,
+    "particion": "test",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00017.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00017.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 115,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00018.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00018.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 116,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00019.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00019.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 117,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00020.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00020.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 118,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00021.png",
+    "preparada": "data/preparados/test/Horse Mackerel/00021.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 119,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00022.png",
+    "preparada": "data/preparados/validacion/Horse Mackerel/00022.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 120,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00023.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00023.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 121,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00024.png",
+    "preparada": "data/preparados/validacion/Horse Mackerel/00024.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 122,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00025.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00025.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 123,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00026.png",
+    "preparada": "data/preparados/test/Horse Mackerel/00026.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 124,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00027.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00027.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 125,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00028.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00028.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 126,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00029.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00029.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 127,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00030.png",
+    "preparada": "data/preparados/validacion/Horse Mackerel/00030.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 128,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00031.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00031.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 129,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00032.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00032.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 130,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00033.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00033.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 130,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00034.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00034.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 131,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00035.png",
+    "preparada": "data/preparados/validacion/Horse Mackerel/00035.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 132,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00036.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00036.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 133,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00037.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00037.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 134,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00038.png",
+    "preparada": "data/preparados/validacion/Horse Mackerel/00038.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 135,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00039.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00039.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 136,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00040.png",
+    "preparada": "data/preparados/test/Horse Mackerel/00040.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 137,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00041.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00041.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 138,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00042.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00042.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 139,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00043.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00043.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 140,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00044.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00044.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 141,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00045.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00045.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 142,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00046.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00046.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 143,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00047.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00047.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 144,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00048.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00048.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 145,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00049.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00049.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 146,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Horse Mackerel/00050.png",
+    "preparada": "data/preparados/entrenamiento/Horse Mackerel/00050.jpg",
+    "clase": "Horse Mackerel",
+    "grupo": 147,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00001.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00001.jpg",
+    "clase": "Red Mullet",
+    "grupo": 148,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00002.png",
+    "preparada": "data/preparados/test/Red Mullet/00002.jpg",
+    "clase": "Red Mullet",
+    "grupo": 149,
+    "particion": "test",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00003.png",
+    "preparada": "data/preparados/validacion/Red Mullet/00003.jpg",
+    "clase": "Red Mullet",
+    "grupo": 150,
+    "particion": "validacion",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00004.png",
+    "preparada": "data/preparados/validacion/Red Mullet/00004.jpg",
+    "clase": "Red Mullet",
+    "grupo": 151,
+    "particion": "validacion",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00005.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00005.jpg",
+    "clase": "Red Mullet",
+    "grupo": 152,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00006.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00006.jpg",
+    "clase": "Red Mullet",
+    "grupo": 153,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00007.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00007.jpg",
+    "clase": "Red Mullet",
+    "grupo": 154,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00008.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00008.jpg",
+    "clase": "Red Mullet",
+    "grupo": 155,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00009.png",
+    "preparada": "data/preparados/validacion/Red Mullet/00009.jpg",
+    "clase": "Red Mullet",
+    "grupo": 156,
+    "particion": "validacion",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00010.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00010.jpg",
+    "clase": "Red Mullet",
+    "grupo": 157,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00011.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00011.jpg",
+    "clase": "Red Mullet",
+    "grupo": 158,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00012.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00012.jpg",
+    "clase": "Red Mullet",
+    "grupo": 159,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00013.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00013.jpg",
+    "clase": "Red Mullet",
+    "grupo": 160,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00014.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00014.jpg",
+    "clase": "Red Mullet",
+    "grupo": 161,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00015.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00015.jpg",
+    "clase": "Red Mullet",
+    "grupo": 162,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00016.png",
+    "preparada": "data/preparados/test/Red Mullet/00016.jpg",
+    "clase": "Red Mullet",
+    "grupo": 163,
+    "particion": "test",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00017.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00017.jpg",
+    "clase": "Red Mullet",
+    "grupo": 164,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00018.png",
+    "preparada": "data/preparados/validacion/Red Mullet/00018.jpg",
+    "clase": "Red Mullet",
+    "grupo": 165,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00019.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00019.jpg",
+    "clase": "Red Mullet",
+    "grupo": 166,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00020.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00020.jpg",
+    "clase": "Red Mullet",
+    "grupo": 167,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00021.png",
+    "preparada": "data/preparados/validacion/Red Mullet/00021.jpg",
+    "clase": "Red Mullet",
+    "grupo": 168,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00022.png",
+    "preparada": "data/preparados/test/Red Mullet/00022.jpg",
+    "clase": "Red Mullet",
+    "grupo": 169,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00023.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00023.jpg",
+    "clase": "Red Mullet",
+    "grupo": 170,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00024.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00024.jpg",
+    "clase": "Red Mullet",
+    "grupo": 171,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00025.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00025.jpg",
+    "clase": "Red Mullet",
+    "grupo": 172,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00026.png",
+    "preparada": "data/preparados/test/Red Mullet/00026.jpg",
+    "clase": "Red Mullet",
+    "grupo": 173,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00027.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00027.jpg",
+    "clase": "Red Mullet",
+    "grupo": 174,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00028.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00028.jpg",
+    "clase": "Red Mullet",
+    "grupo": 175,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00029.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00029.jpg",
+    "clase": "Red Mullet",
+    "grupo": 176,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00030.png",
+    "preparada": "data/preparados/validacion/Red Mullet/00030.jpg",
+    "clase": "Red Mullet",
+    "grupo": 177,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00031.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00031.jpg",
+    "clase": "Red Mullet",
+    "grupo": 178,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00032.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00032.jpg",
+    "clase": "Red Mullet",
+    "grupo": 179,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00033.png",
+    "preparada": "data/preparados/test/Red Mullet/00033.jpg",
+    "clase": "Red Mullet",
+    "grupo": 180,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00034.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00034.jpg",
+    "clase": "Red Mullet",
+    "grupo": 181,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00035.png",
+    "preparada": "data/preparados/validacion/Red Mullet/00035.jpg",
+    "clase": "Red Mullet",
+    "grupo": 182,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00036.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00036.jpg",
+    "clase": "Red Mullet",
+    "grupo": 183,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00037.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00037.jpg",
+    "clase": "Red Mullet",
+    "grupo": 184,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00038.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00038.jpg",
+    "clase": "Red Mullet",
+    "grupo": 185,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00039.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00039.jpg",
+    "clase": "Red Mullet",
+    "grupo": 186,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00040.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00040.jpg",
+    "clase": "Red Mullet",
+    "grupo": 187,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00041.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00041.jpg",
+    "clase": "Red Mullet",
+    "grupo": 188,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00042.png",
+    "preparada": "data/preparados/validacion/Red Mullet/00042.jpg",
+    "clase": "Red Mullet",
+    "grupo": 189,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00043.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00043.jpg",
+    "clase": "Red Mullet",
+    "grupo": 190,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00044.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00044.jpg",
+    "clase": "Red Mullet",
+    "grupo": 191,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00045.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00045.jpg",
+    "clase": "Red Mullet",
+    "grupo": 192,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00046.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00046.jpg",
+    "clase": "Red Mullet",
+    "grupo": 193,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00047.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00047.jpg",
+    "clase": "Red Mullet",
+    "grupo": 194,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00048.png",
+    "preparada": "data/preparados/entrenamiento/Red Mullet/00048.jpg",
+    "clase": "Red Mullet",
+    "grupo": 195,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00049.png",
+    "preparada": "data/preparados/test/Red Mullet/00049.jpg",
+    "clase": "Red Mullet",
+    "grupo": 196,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Mullet/00050.png",
+    "preparada": "data/preparados/test/Red Mullet/00050.jpg",
+    "clase": "Red Mullet",
+    "grupo": 197,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/100_1461.JPG",
+    "preparada": "data/preparados/test/Red Sea Bream/100_1461.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 198,
+    "particion": "test",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/100_1462.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/100_1462.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 199,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/100_1463.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/100_1463.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 200,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/100_1465.JPG",
+    "preparada": "data/preparados/validacion/Red Sea Bream/100_1465.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 201,
+    "particion": "validacion",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/100_1476.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/100_1476.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 202,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/100_1477.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/100_1477.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 203,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/100_1478.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/100_1478.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 204,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/100_1479.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/100_1479.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 205,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/100_1480.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/100_1480.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 206,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/100_1481.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/100_1481.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 207,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/100_1482.JPG",
+    "preparada": "data/preparados/test/Red Sea Bream/100_1482.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 208,
+    "particion": "test",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/100_1483.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/100_1483.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 209,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/100_1484.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/100_1484.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 210,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/100_1485.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/100_1485.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 211,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/100_1486.JPG",
+    "preparada": "data/preparados/test/Red Sea Bream/100_1486.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 212,
+    "particion": "test",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/100_1487.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/100_1487.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 213,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/100_1488.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/100_1488.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 214,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/100_1489.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/100_1489.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 215,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/SAM_5533.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/SAM_5533.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 216,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/SAM_5534.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/SAM_5534.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 217,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/SAM_5535.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/SAM_5535.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 218,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/SAM_5536.JPG",
+    "preparada": "data/preparados/validacion/Red Sea Bream/SAM_5536.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 219,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/SAM_5537.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/SAM_5537.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 220,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/SAM_5538.JPG",
+    "preparada": "data/preparados/validacion/Red Sea Bream/SAM_5538.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 221,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/SAM_5540.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/SAM_5540.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 222,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/SAM_5543.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/SAM_5543.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 223,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/SAM_5544.JPG",
+    "preparada": "data/preparados/test/Red Sea Bream/SAM_5544.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 224,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/SAM_5545.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/SAM_5545.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 225,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/SAM_5547.JPG",
+    "preparada": "data/preparados/test/Red Sea Bream/SAM_5547.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 226,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/SAM_5549.JPG",
+    "preparada": "data/preparados/test/Red Sea Bream/SAM_5549.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 227,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/SAM_5550.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/SAM_5550.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 228,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/SAM_5551.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/SAM_5551.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 229,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/SAM_5552.JPG",
+    "preparada": "data/preparados/test/Red Sea Bream/SAM_5552.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 230,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/SAM_5554.JPG",
+    "preparada": "data/preparados/validacion/Red Sea Bream/SAM_5554.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 231,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/SAM_5555.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/SAM_5555.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 232,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/SAM_5557.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/SAM_5557.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 233,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/SAM_5558.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/SAM_5558.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 234,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/SAM_5561.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/SAM_5561.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 235,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/SAM_5564.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/SAM_5564.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 236,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/SAM_5565.JPG",
+    "preparada": "data/preparados/validacion/Red Sea Bream/SAM_5565.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 237,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/SAM_5568.JPG",
+    "preparada": "data/preparados/test/Red Sea Bream/SAM_5568.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 238,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/SAM_5569.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/SAM_5569.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 239,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/SAM_5571.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/SAM_5571.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 240,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/SAM_5573.JPG",
+    "preparada": "data/preparados/validacion/Red Sea Bream/SAM_5573.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 241,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/SAM_5575.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/SAM_5575.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 242,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/SAM_5577.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/SAM_5577.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 243,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/SAM_5581.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/SAM_5581.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 244,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/SAM_5582.JPG",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/SAM_5582.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 245,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/SAM_5583.JPG",
+    "preparada": "data/preparados/validacion/Red Sea Bream/SAM_5583.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 246,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Red Sea Bream/WhatsApp Image 2019-04-25 at 15.33.13.jpeg",
+    "preparada": "data/preparados/entrenamiento/Red Sea Bream/WhatsApp Image 2019-04-25 at 15.33.13.jpg",
+    "clase": "Red Sea Bream",
+    "grupo": 244,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/1.JPG",
+    "preparada": "data/preparados/validacion/Sea Bass/1.jpg",
+    "clase": "Sea Bass",
+    "grupo": 247,
+    "particion": "validacion",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/10.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/10.jpg",
+    "clase": "Sea Bass",
+    "grupo": 248,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/11.JPG",
+    "preparada": "data/preparados/validacion/Sea Bass/11.jpg",
+    "clase": "Sea Bass",
+    "grupo": 249,
+    "particion": "validacion",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/12.JPG",
+    "preparada": "data/preparados/validacion/Sea Bass/12.jpg",
+    "clase": "Sea Bass",
+    "grupo": 250,
+    "particion": "validacion",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/13.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/13.jpg",
+    "clase": "Sea Bass",
+    "grupo": 251,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/14.JPG",
+    "preparada": "data/preparados/test/Sea Bass/14.jpg",
+    "clase": "Sea Bass",
+    "grupo": 252,
+    "particion": "test",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/15.JPG",
+    "preparada": "data/preparados/test/Sea Bass/15.jpg",
+    "clase": "Sea Bass",
+    "grupo": 253,
+    "particion": "test",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/16.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/16.jpg",
+    "clase": "Sea Bass",
+    "grupo": 254,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/17.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/17.jpg",
+    "clase": "Sea Bass",
+    "grupo": 255,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/18.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/18.jpg",
+    "clase": "Sea Bass",
+    "grupo": 256,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/19.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/19.jpg",
+    "clase": "Sea Bass",
+    "grupo": 257,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/2.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/2.jpg",
+    "clase": "Sea Bass",
+    "grupo": 258,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/20.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/20.jpg",
+    "clase": "Sea Bass",
+    "grupo": 259,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/21.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/21.jpg",
+    "clase": "Sea Bass",
+    "grupo": 260,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/22.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/22.jpg",
+    "clase": "Sea Bass",
+    "grupo": 261,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/23.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/23.jpg",
+    "clase": "Sea Bass",
+    "grupo": 262,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/24.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/24.jpg",
+    "clase": "Sea Bass",
+    "grupo": 263,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/25.JPG",
+    "preparada": "data/preparados/test/Sea Bass/25.jpg",
+    "clase": "Sea Bass",
+    "grupo": 264,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/26.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/26.jpg",
+    "clase": "Sea Bass",
+    "grupo": 265,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/27.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/27.jpg",
+    "clase": "Sea Bass",
+    "grupo": 266,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/28.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/28.jpg",
+    "clase": "Sea Bass",
+    "grupo": 267,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/29.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/29.jpg",
+    "clase": "Sea Bass",
+    "grupo": 268,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/3.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/3.jpg",
+    "clase": "Sea Bass",
+    "grupo": 269,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/30.JPG",
+    "preparada": "data/preparados/validacion/Sea Bass/30.jpg",
+    "clase": "Sea Bass",
+    "grupo": 270,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/31.JPG",
+    "preparada": "data/preparados/test/Sea Bass/31.jpg",
+    "clase": "Sea Bass",
+    "grupo": 271,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/32.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/32.jpg",
+    "clase": "Sea Bass",
+    "grupo": 272,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/33.JPG",
+    "preparada": "data/preparados/test/Sea Bass/33.jpg",
+    "clase": "Sea Bass",
+    "grupo": 273,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/34.JPG",
+    "preparada": "data/preparados/validacion/Sea Bass/34.jpg",
+    "clase": "Sea Bass",
+    "grupo": 274,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/35.JPG",
+    "preparada": "data/preparados/test/Sea Bass/35.jpg",
+    "clase": "Sea Bass",
+    "grupo": 275,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/36.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/36.jpg",
+    "clase": "Sea Bass",
+    "grupo": 276,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/37.JPG",
+    "preparada": "data/preparados/validacion/Sea Bass/37.jpg",
+    "clase": "Sea Bass",
+    "grupo": 277,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/38.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/38.jpg",
+    "clase": "Sea Bass",
+    "grupo": 278,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/39.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/39.jpg",
+    "clase": "Sea Bass",
+    "grupo": 279,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/4.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/4.jpg",
+    "clase": "Sea Bass",
+    "grupo": 280,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/40.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/40.jpg",
+    "clase": "Sea Bass",
+    "grupo": 281,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/41.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/41.jpg",
+    "clase": "Sea Bass",
+    "grupo": 282,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/42.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/42.jpg",
+    "clase": "Sea Bass",
+    "grupo": 283,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/43.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/43.jpg",
+    "clase": "Sea Bass",
+    "grupo": 284,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/44.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/44.jpg",
+    "clase": "Sea Bass",
+    "grupo": 285,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/45.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/45.jpg",
+    "clase": "Sea Bass",
+    "grupo": 286,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/46.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/46.jpg",
+    "clase": "Sea Bass",
+    "grupo": 287,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/47.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/47.jpg",
+    "clase": "Sea Bass",
+    "grupo": 288,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/48.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/48.jpg",
+    "clase": "Sea Bass",
+    "grupo": 289,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/49.JPG",
+    "preparada": "data/preparados/test/Sea Bass/49.jpg",
+    "clase": "Sea Bass",
+    "grupo": 290,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/5.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/5.jpg",
+    "clase": "Sea Bass",
+    "grupo": 291,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/50.JPG",
+    "preparada": "data/preparados/validacion/Sea Bass/50.jpg",
+    "clase": "Sea Bass",
+    "grupo": 292,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/6.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/6.jpg",
+    "clase": "Sea Bass",
+    "grupo": 293,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/7.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/7.jpg",
+    "clase": "Sea Bass",
+    "grupo": 294,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/8.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/8.jpg",
+    "clase": "Sea Bass",
+    "grupo": 295,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Sea Bass/9.JPG",
+    "preparada": "data/preparados/entrenamiento/Sea Bass/9.jpg",
+    "clase": "Sea Bass",
+    "grupo": 296,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00001.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00001.jpg",
+    "clase": "Shrimp",
+    "grupo": 297,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00002.png",
+    "preparada": "data/preparados/test/Shrimp/00002.jpg",
+    "clase": "Shrimp",
+    "grupo": 298,
+    "particion": "test",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00003.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00003.jpg",
+    "clase": "Shrimp",
+    "grupo": 299,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00004.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00004.jpg",
+    "clase": "Shrimp",
+    "grupo": 299,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00005.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00005.jpg",
+    "clase": "Shrimp",
+    "grupo": 300,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00006.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00006.jpg",
+    "clase": "Shrimp",
+    "grupo": 301,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00007.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00007.jpg",
+    "clase": "Shrimp",
+    "grupo": 302,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00008.png",
+    "preparada": "data/preparados/validacion/Shrimp/00008.jpg",
+    "clase": "Shrimp",
+    "grupo": 303,
+    "particion": "validacion",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00009.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00009.jpg",
+    "clase": "Shrimp",
+    "grupo": 304,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00010.png",
+    "preparada": "data/preparados/test/Shrimp/00010.jpg",
+    "clase": "Shrimp",
+    "grupo": 305,
+    "particion": "test",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00011.png",
+    "preparada": "data/preparados/test/Shrimp/00011.jpg",
+    "clase": "Shrimp",
+    "grupo": 306,
+    "particion": "test",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00012.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00012.jpg",
+    "clase": "Shrimp",
+    "grupo": 307,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00013.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00013.jpg",
+    "clase": "Shrimp",
+    "grupo": 307,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00014.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00014.jpg",
+    "clase": "Shrimp",
+    "grupo": 308,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00015.png",
+    "preparada": "data/preparados/validacion/Shrimp/00015.jpg",
+    "clase": "Shrimp",
+    "grupo": 309,
+    "particion": "validacion",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00016.png",
+    "preparada": "data/preparados/test/Shrimp/00016.jpg",
+    "clase": "Shrimp",
+    "grupo": 306,
+    "particion": "test",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00017.png",
+    "preparada": "data/preparados/test/Shrimp/00017.jpg",
+    "clase": "Shrimp",
+    "grupo": 306,
+    "particion": "test",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00018.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00018.jpg",
+    "clase": "Shrimp",
+    "grupo": 310,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00019.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00019.jpg",
+    "clase": "Shrimp",
+    "grupo": 311,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00020.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00020.jpg",
+    "clase": "Shrimp",
+    "grupo": 312,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00021.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00021.jpg",
+    "clase": "Shrimp",
+    "grupo": 312,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00022.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00022.jpg",
+    "clase": "Shrimp",
+    "grupo": 313,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00023.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00023.jpg",
+    "clase": "Shrimp",
+    "grupo": 314,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00024.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00024.jpg",
+    "clase": "Shrimp",
+    "grupo": 315,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00025.png",
+    "preparada": "data/preparados/validacion/Shrimp/00025.jpg",
+    "clase": "Shrimp",
+    "grupo": 316,
+    "particion": "validacion",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00026.png",
+    "preparada": "data/preparados/test/Shrimp/00026.jpg",
+    "clase": "Shrimp",
+    "grupo": 317,
+    "particion": "test",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00027.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00027.jpg",
+    "clase": "Shrimp",
+    "grupo": 318,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00028.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00028.jpg",
+    "clase": "Shrimp",
+    "grupo": 319,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00029.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00029.jpg",
+    "clase": "Shrimp",
+    "grupo": 320,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00030.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00030.jpg",
+    "clase": "Shrimp",
+    "grupo": 320,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00031.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00031.jpg",
+    "clase": "Shrimp",
+    "grupo": 320,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00032.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00032.jpg",
+    "clase": "Shrimp",
+    "grupo": 321,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00033.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00033.jpg",
+    "clase": "Shrimp",
+    "grupo": 322,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00034.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00034.jpg",
+    "clase": "Shrimp",
+    "grupo": 323,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00035.png",
+    "preparada": "data/preparados/validacion/Shrimp/00035.jpg",
+    "clase": "Shrimp",
+    "grupo": 324,
+    "particion": "validacion",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00036.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00036.jpg",
+    "clase": "Shrimp",
+    "grupo": 320,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00037.png",
+    "preparada": "data/preparados/test/Shrimp/00037.jpg",
+    "clase": "Shrimp",
+    "grupo": 325,
+    "particion": "test",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00038.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00038.jpg",
+    "clase": "Shrimp",
+    "grupo": 320,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00039.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00039.jpg",
+    "clase": "Shrimp",
+    "grupo": 320,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00040.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00040.jpg",
+    "clase": "Shrimp",
+    "grupo": 320,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00041.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00041.jpg",
+    "clase": "Shrimp",
+    "grupo": 320,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00042.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00042.jpg",
+    "clase": "Shrimp",
+    "grupo": 320,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00043.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00043.jpg",
+    "clase": "Shrimp",
+    "grupo": 320,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00044.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00044.jpg",
+    "clase": "Shrimp",
+    "grupo": 320,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00045.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00045.jpg",
+    "clase": "Shrimp",
+    "grupo": 320,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00046.png",
+    "preparada": "data/preparados/validacion/Shrimp/00046.jpg",
+    "clase": "Shrimp",
+    "grupo": 326,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00047.png",
+    "preparada": "data/preparados/validacion/Shrimp/00047.jpg",
+    "clase": "Shrimp",
+    "grupo": 326,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00048.png",
+    "preparada": "data/preparados/validacion/Shrimp/00048.jpg",
+    "clase": "Shrimp",
+    "grupo": 327,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00049.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00049.jpg",
+    "clase": "Shrimp",
+    "grupo": 328,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Shrimp/00050.png",
+    "preparada": "data/preparados/entrenamiento/Shrimp/00050.jpg",
+    "clase": "Shrimp",
+    "grupo": 329,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00001.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00001.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 330,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00002.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00002.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 331,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00003.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00003.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 332,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00004.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00004.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 333,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00005.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00005.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 334,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00006.png",
+    "preparada": "data/preparados/test/Striped Red Mullet/00006.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 335,
+    "particion": "test",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00007.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00007.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 336,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00008.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00008.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 337,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00009.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00009.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 338,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00010.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00010.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 339,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00011.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00011.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 340,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00012.png",
+    "preparada": "data/preparados/validacion/Striped Red Mullet/00012.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 341,
+    "particion": "validacion",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00013.png",
+    "preparada": "data/preparados/test/Striped Red Mullet/00013.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 342,
+    "particion": "test",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00014.png",
+    "preparada": "data/preparados/test/Striped Red Mullet/00014.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 343,
+    "particion": "test",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00015.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00015.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 344,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00016.png",
+    "preparada": "data/preparados/validacion/Striped Red Mullet/00016.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 345,
+    "particion": "validacion",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00017.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00017.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 346,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00018.png",
+    "preparada": "data/preparados/validacion/Striped Red Mullet/00018.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 347,
+    "particion": "validacion",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00019.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00019.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 348,
+    "particion": "entrenamiento",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00020.png",
+    "preparada": "data/preparados/validacion/Striped Red Mullet/00020.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 349,
+    "particion": "validacion",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00021.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00021.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 350,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00022.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00022.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 351,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00023.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00023.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 352,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00024.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00024.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 353,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00025.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00025.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 354,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00026.png",
+    "preparada": "data/preparados/validacion/Striped Red Mullet/00026.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 355,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00027.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00027.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 356,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00028.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00028.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 357,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00029.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00029.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 358,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00030.png",
+    "preparada": "data/preparados/test/Striped Red Mullet/00030.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 359,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00031.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00031.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 360,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00032.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00032.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 361,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00033.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00033.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 362,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00034.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00034.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 363,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00035.png",
+    "preparada": "data/preparados/test/Striped Red Mullet/00035.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 364,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00036.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00036.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 365,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00037.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00037.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 366,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00038.png",
+    "preparada": "data/preparados/test/Striped Red Mullet/00038.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 367,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00039.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00039.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 368,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00040.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00040.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 369,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00041.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00041.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 370,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00042.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00042.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 371,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00043.png",
+    "preparada": "data/preparados/validacion/Striped Red Mullet/00043.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 372,
+    "particion": "validacion",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00044.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00044.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 373,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00045.png",
+    "preparada": "data/preparados/validacion/Striped Red Mullet/00045.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 345,
+    "particion": "validacion",
+    "ancho_original": 2832
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00046.png",
+    "preparada": "data/preparados/test/Striped Red Mullet/00046.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 374,
+    "particion": "test",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00047.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00047.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 375,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00048.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00048.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 376,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00049.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00049.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 377,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  },
+  {
+    "original": "data/Fish_Dataset/Striped Red Mullet/00050.png",
+    "preparada": "data/preparados/entrenamiento/Striped Red Mullet/00050.jpg",
+    "clase": "Striped Red Mullet",
+    "grupo": 378,
+    "particion": "entrenamiento",
+    "ancho_original": 1024
+  }
+]

@@ -1,12 +1,28 @@
+import os
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-DATA_DIR = ROOT / "data" / "Fish_Dataset"
-CACHE_DIR = ROOT / "data" / "processed"
-SPLITS_DIR = ROOT / "splits"
-CONFIGS_DIR = ROOT / "configs"
-RUNS_DIR = ROOT / "runs"
-FIGURES_DIR = ROOT / "report" / "figures"
+RAIZ = Path(__file__).resolve().parent.parent
+DATOS_ORIGINALES = RAIZ / "data" / "Fish_Dataset"
+DATOS_PREPARADOS = RAIZ / "data" / "preparados"
+PARTICION = RAIZ / "particion.json"
+EXPERIMENTOS = RAIZ / "resultados" / "experimentos"
+FIGURAS = RAIZ / "resultados" / "figuras"
 
-SEED = 42
-IMAGE_EXTENSIONS = (".png", ".jpg", ".jpeg")
+SEMILLA = 42
+EXTENSIONES_IMAGEN = (".png", ".jpg", ".jpeg")
+PARTICIONES = ("entrenamiento", "validacion", "test")
+PROPORCION_VALIDACION = 0.15
+PROPORCION_TEST = 0.15
+INTENTOS_PARTICION = 50
+
+TAMANO_PREPARADO = (300, 400)
+TAMANO_CNN = (150, 200)
+TAMANO_TRANSFERENCIA = (224, 300)
+MEDIA_IMAGENET = (0.485, 0.456, 0.406)
+DESVIACION_IMAGENET = (0.229, 0.224, 0.225)
+
+LADO_HUELLA = 16
+UMBRAL_CASI_DUPLICADO = 6
+ANCHO_MINIMO_KODAK = 2000
+
+NUM_PROCESOS = min(4, os.cpu_count() or 1)

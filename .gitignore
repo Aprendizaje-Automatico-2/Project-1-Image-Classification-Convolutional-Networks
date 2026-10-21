@@ -4,9 +4,11 @@ data/
 *.m
 *.txt
 !requirements.txt
-runs/
+resultados/
 __pycache__/
 .DS_Store
 *.pt
 *.md
 *.pdf
+!README.md
+*.ipynb
