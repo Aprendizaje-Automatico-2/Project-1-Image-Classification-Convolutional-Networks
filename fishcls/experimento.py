@@ -113,5 +113,10 @@ def actualizar_resumen(fila: dict) -> None:
     pd.concat([anteriores, pd.DataFrame([fila])]).sort_values("nombre").to_csv(RESUMEN_EXPERIMENTOS, index=False)
 
 
+def cargar_resumen(patron: str) -> pd.DataFrame:
+    tabla = pd.read_csv(RESUMEN_EXPERIMENTOS)
+    return tabla[tabla["nombre"].str.fullmatch(patron)].reset_index(drop=True)
+
+
 def cargar_historial(nombre: str) -> dict[str, list[float]]:
     return pd.read_csv(EXPERIMENTOS / nombre / "historial.csv", index_col="epoca").to_dict(orient="list")

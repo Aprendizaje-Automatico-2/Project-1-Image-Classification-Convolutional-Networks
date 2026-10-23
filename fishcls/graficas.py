@@ -2,6 +2,7 @@ from pathlib import Path
 
 import numpy as np
 import torch
+import pandas as pd
 from matplotlib import colormaps
 from matplotlib.figure import Figure
 from PIL import Image
@@ -105,6 +106,22 @@ def comparar_historiales(historiales: dict[str, dict[str, list[float]]], titulo:
             eje.plot(epocas, historial[f"{metrica}_train"], color=color, linestyle=":", alpha=0.7)
             eje.plot(epocas, historial[f"{metrica}_val"], color=color, label=experimento)
         formatear_eje(eje, f"{nombre} (continua: validación · punteada: entrenamiento)", nombre)
+    return figura
+
+
+def barras_experimentos(tabla: pd.DataFrame, referencia: str, titulo: str) -> Figure:
+    figura = Figure(figsize=(12, 0.4 * len(tabla) + 1.5))
+    for eje, columna, nombre in zip(figura.subplots(1, 2, sharey=True), ("acc_val", "perdida_val"),
+                                    ("Accuracy de validación", "Pérdida de validación")):
+        colores = ["tab:red" if experimento == referencia else "tab:blue" for experimento in tabla["nombre"]]
+        eje.barh(tabla["nombre"], tabla[columna], color=colores)
+        eje.axvline(tabla.loc[tabla["nombre"] == referencia, columna].item(), color="tab:red", linestyle="--")
+        for posicion, valor in enumerate(tabla[columna]):
+            eje.text(valor, posicion, f" {valor:.3f}", va="center", fontsize=8)
+        eje.set_title(nombre)
+        eje.invert_yaxis()
+        eje.grid(True, axis="x", alpha=0.3)
+    figura.suptitle(titulo)
     return figura
 
 

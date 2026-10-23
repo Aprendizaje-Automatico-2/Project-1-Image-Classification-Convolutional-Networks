@@ -7,8 +7,14 @@ import torchvision
 
 from fishcls.config import DATOS_PREPARADOS, SEMILLA, TAMANO_CNN
 from fishcls.datos import abrir_imagen, crear_dataloaders, listar_imagenes, preparar_dataset, resumir_particion
-from fishcls.experimento import cargar_configuracion, cargar_historial, ejecutar_experimento
-from fishcls.graficas import comparar_historiales, galeria_aumentado, guardar_figura, lote_de_ejemplo
+from fishcls.experimento import cargar_configuracion, cargar_historial, cargar_resumen, ejecutar_experimento
+from fishcls.graficas import (
+    barras_experimentos,
+    comparar_historiales,
+    galeria_aumentado,
+    guardar_figura,
+    lote_de_ejemplo,
+)
 from fishcls.utilidades import describir_dispositivo, fijar_semilla, obtener_dispositivo
 
 
@@ -45,6 +51,14 @@ def comparar(argumentos: argparse.Namespace) -> None:
     print(guardar_figura(comparar_historiales(historiales, argumentos.titulo), f"{argumentos.salida}.png"))
 
 
+def resumir(argumentos: argparse.Namespace) -> None:
+    tabla = cargar_resumen(argumentos.patron)
+    columnas = ["nombre", "acc_val", "f1_val", "perdida_val", "mejor_epoca", "epocas_entrenadas", "parametros", "segundos"]
+    print(tabla[columnas].to_string(index=False))
+    figura = barras_experimentos(tabla, argumentos.referencia, argumentos.titulo)
+    print(guardar_figura(figura, f"{argumentos.salida}.png"))
+
+
 def construir_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="fishcls")
     comandos = parser.add_subparsers(dest="comando", required=True)
@@ -59,6 +73,12 @@ def construir_parser() -> argparse.ArgumentParser:
     comparar_parser.add_argument("--titulo", required=True)
     comparar_parser.add_argument("--salida", required=True)
     comparar_parser.set_defaults(ejecutar=comparar)
+    resumir_parser = comandos.add_parser("resumir", help="tabla y barras de los experimentos que cumplen un patrón")
+    resumir_parser.add_argument("patron", help="expresión regular sobre el nombre, p. ej. 'C.*'")
+    resumir_parser.add_argument("--referencia", required=True)
+    resumir_parser.add_argument("--titulo", required=True)
+    resumir_parser.add_argument("--salida", required=True)
+    resumir_parser.set_defaults(ejecutar=resumir)
     return parser
 
 

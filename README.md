@@ -18,6 +18,7 @@ python -m fishcls preparar         # agrupa casi duplicados, divide 70/15/15 por
 python -m fishcls ver-aumentado    # figuras del data augmentation en resultados/figuras/
 python -m fishcls entrenar configuraciones/cnn/C01_base.json   # uno o varios experimentos
 python -m fishcls comparar C00_sin_aumentado C01_base --titulo "Con y sin DA" --salida comparativa
+python -m fishcls resumir 'C.*' --referencia C01_base --titulo "Búsqueda manual" --salida busqueda
 python -m unittest discover tests
 ```
 
