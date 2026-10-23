@@ -7,8 +7,14 @@ import torch
 import torch.nn as nn
 
 from fishcls.entrenamiento import ParadaTemprana
-from fishcls.experimento import ConfiguracionExperimento, cargar_configuracion, construir_modelo
-from fishcls.modelos import ACTIVACIONES
+from fishcls.experimento import (
+    ConfiguracionExperimento,
+    cargar_configuracion,
+    construir_modelo,
+    crear_optimizador,
+    fases_entrenamiento,
+)
+from fishcls.modelos import ACTIVACIONES, PREENTRENADOS, congelar_extractor, modelo_preentrenado, parametros_cabeza
 
 TAMANO_PEQUENO = (48, 64)
 
@@ -43,6 +49,30 @@ class ConvNetTest(unittest.TestCase):
         self.assertLess(perdida.item(), 0.05)
 
 
+class PreentrenadosTest(unittest.TestCase):
+    def test_salida_de_ocho_clases_y_congelado_solo_deja_la_cabeza(self):
+        for nombre in PREENTRENADOS:
+            with self.subTest(modelo=nombre):
+                modelo = modelo_preentrenado(nombre, num_clases=8, con_pesos=False)
+                self.assertEqual(tuple(modelo.eval()(torch.randn(1, 3, 64, 96)).shape), (1, 8))
+                congelar_extractor(modelo, nombre, congelar=True)
+                entrenables = [p for p in modelo.parameters() if p.requires_grad]
+                self.assertEqual({id(p) for p in entrenables}, {id(p) for p in parametros_cabeza(modelo, nombre)})
+                congelar_extractor(modelo, nombre, congelar=False)
+                self.assertTrue(all(p.requires_grad for p in modelo.parameters()))
+
+    def test_ajuste_fino_usa_tasa_reducida_en_el_extractor(self):
+        config = ConfiguracionExperimento(nombre="t", modelo="resnet18", tasa_aprendizaje=1e-3, factor_lr_extractor=0.1)
+        optimizador = crear_optimizador(modelo_preentrenado("resnet18", 8, con_pesos=False), config)
+        self.assertEqual([grupo["lr"] for grupo in optimizador.param_groups], [1e-3, 1e-4])
+
+    def test_fases_por_estrategia(self):
+        base = {"nombre": "t", "epocas": 30, "epocas_congelado": 5}
+        self.assertEqual(fases_entrenamiento(ConfiguracionExperimento(**base, estrategia="congelado")), [(True, 30)])
+        self.assertEqual(fases_entrenamiento(ConfiguracionExperimento(**base, estrategia="dos_fases")),
+                         [(True, 5), (False, 30)])
+
+
 class ParadaTempranaTest(unittest.TestCase):
     def test_para_tras_la_paciencia_y_guarda_el_mejor_estado(self):
         modelo = nn.Linear(1, 1)
@@ -55,6 +85,15 @@ class ParadaTempranaTest(unittest.TestCase):
         self.assertEqual(decisiones, [False, False, False, False, False, True])
         self.assertEqual(parada.mejor_epoca, 4)
         self.assertEqual(parada.mejor_estado["weight"].item(), 4)
+
+    def test_reiniciar_paciencia_conserva_el_mejor_estado(self):
+        modelo = nn.Linear(1, 1)
+        parada = ParadaTemprana(paciencia=2)
+        parada(0.5, modelo, 1)
+        parada(0.9, modelo, 2)
+        parada.reiniciar_paciencia()
+        self.assertFalse(parada(0.9, modelo, 3))
+        self.assertEqual((parada.mejor_epoca, parada.mejor_perdida_val), (1, 0.5))
 
 
 class ConfiguracionTest(unittest.TestCase):

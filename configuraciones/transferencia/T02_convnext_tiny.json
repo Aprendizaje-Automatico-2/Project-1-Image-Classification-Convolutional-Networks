@@ -1,0 +1,1 @@
+{"modelo": "convnext_tiny", "estrategia": "dos_fases", "tamano": [224, 224], "epocas": 30, "paciencia": 5, "epocas_congelado": 5}

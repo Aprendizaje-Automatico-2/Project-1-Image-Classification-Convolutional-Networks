@@ -9,6 +9,7 @@ from fishcls.config import DATOS_PREPARADOS, SEMILLA, TAMANO_CNN
 from fishcls.datos import abrir_imagen, crear_dataloaders, listar_imagenes, preparar_dataset, resumir_particion
 from fishcls.experimento import cargar_configuracion, cargar_historial, cargar_resumen, ejecutar_experimento
 from fishcls.graficas import (
+    accuracy_frente_a_parametros,
     barras_experimentos,
     comparar_historiales,
     galeria_aumentado,
@@ -53,10 +54,11 @@ def comparar(argumentos: argparse.Namespace) -> None:
 
 def resumir(argumentos: argparse.Namespace) -> None:
     tabla = cargar_resumen(argumentos.patron)
-    columnas = ["nombre", "acc_val", "f1_val", "perdida_val", "mejor_epoca", "epocas_entrenadas", "parametros", "segundos"]
-    print(tabla[columnas].to_string(index=False))
-    figura = barras_experimentos(tabla, argumentos.referencia, argumentos.titulo)
-    print(guardar_figura(figura, f"{argumentos.salida}.png"))
+    columnas = ["nombre", "acc_val", "f1_val", "perdida_val", "mejor_epoca", "epocas_entrenadas", "parametros",
+                "ms_imagen", "segundos"]
+    print(tabla[[columna for columna in columnas if columna in tabla]].to_string(index=False))
+    print(guardar_figura(barras_experimentos(tabla, argumentos.referencia, argumentos.titulo), f"{argumentos.salida}.png"))
+    print(guardar_figura(accuracy_frente_a_parametros(tabla, argumentos.titulo), f"{argumentos.salida}_parametros.png"))
 
 
 def construir_parser() -> argparse.ArgumentParser:

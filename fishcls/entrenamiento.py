@@ -28,6 +28,9 @@ class ParadaTemprana:
             self.epocas_sin_mejora += 1
         return self.epocas_sin_mejora >= self.paciencia
 
+    def reiniciar_paciencia(self) -> None:
+        self.epocas_sin_mejora = 0
+
 
 def ejecutar_epoca(
     modelo: nn.Module,
@@ -64,9 +67,11 @@ def entrenar(
     parada: ParadaTemprana,
     dispositivo: torch.device,
     epocas: int,
+    primera_epoca: int = 1,
 ) -> dict[str, list[float]]:
     historial = {metrica: [] for metrica in METRICAS_HISTORIAL}
-    for epoca in range(1, epocas + 1):
+    ultima_epoca = primera_epoca + epocas - 1
+    for epoca in range(primera_epoca, ultima_epoca + 1):
         comienzo = time()
         perdida_train, y_real_train, y_pred_train = ejecutar_epoca(
             modelo, loader_train, funcion_perdida, dispositivo, optimizador
@@ -79,7 +84,7 @@ def entrenar(
         detener = parada(perdida_val, modelo, epoca)
         estado = "mejora" if parada.mejor_epoca == epoca else f"sin mejora {parada.epocas_sin_mejora}/{parada.paciencia}"
         print(
-            f"Época [{epoca:3d}/{epocas}] | "
+            f"Época [{epoca:3d}/{ultima_epoca}] | "
             f"Train Loss: {perdida_train:.4f} | Train Acc: {historial['acc_train'][-1]:.4f} | "
             f"Val Loss: {perdida_val:.4f} | Val Acc: {historial['acc_val'][-1]:.4f} | "
             f"{estado} | {time() - comienzo:.1f}s"

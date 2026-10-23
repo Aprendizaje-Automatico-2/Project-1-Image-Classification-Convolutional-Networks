@@ -8,16 +8,28 @@ import torch.nn as nn
 
 from fishcls.config import EXPERIMENTOS, RESUMEN_EXPERIMENTOS, SEMILLA, TAMANO_CNN
 from fishcls.datos import crear_dataloaders
-from fishcls.entrenamiento import ParadaTemprana, entrenar
+from fishcls.entrenamiento import METRICAS_HISTORIAL, ParadaTemprana, entrenar
 from fishcls.evaluacion import Evaluacion, evaluar
 from fishcls.graficas import curvas_entrenamiento, guardar_figura, matriz_confusion
-from fishcls.modelos import ConvNet, contar_parametros
+from fishcls.modelos import (
+    PREENTRENADOS,
+    ConvNet,
+    congelar_extractor,
+    contar_parametros,
+    medir_milisegundos_por_imagen,
+    modelo_preentrenado,
+    parametros_cabeza,
+)
 from fishcls.utilidades import cargar_json, describir_dispositivo, fijar_semilla, guardar_json, obtener_dispositivo
 
 
 @dataclass(frozen=True)
 class ConfiguracionExperimento:
     nombre: str
+    modelo: str = "convnet"
+    estrategia: str = "ajuste_fino"
+    epocas_congelado: int = 10
+    factor_lr_extractor: float = 0.1
     filtros: tuple[int, ...] = (16, 32, 64)
     neuronas_fc: tuple[int, ...] = (128,)
     tamano_kernel: int = 5
@@ -42,6 +54,8 @@ def cargar_configuracion(ruta: Path) -> ConfiguracionExperimento:
 
 
 def construir_modelo(config: ConfiguracionExperimento, num_clases: int) -> nn.Module:
+    if config.modelo in PREENTRENADOS:
+        return modelo_preentrenado(config.modelo, num_clases)
     return ConvNet(
         num_clases=num_clases,
         tamano=config.tamano,
@@ -55,22 +69,43 @@ def construir_modelo(config: ConfiguracionExperimento, num_clases: int) -> nn.Mo
     )
 
 
+def fases_entrenamiento(config: ConfiguracionExperimento) -> list[tuple[bool, int]]:
+    return {
+        "congelado": [(True, config.epocas)],
+        "ajuste_fino": [(False, config.epocas)],
+        "dos_fases": [(True, config.epocas_congelado), (False, config.epocas)],
+    }[config.estrategia]
+
+
+def crear_optimizador(modelo: nn.Module, config: ConfiguracionExperimento) -> torch.optim.Optimizer:
+    cabeza = parametros_cabeza(modelo, config.modelo)
+    de_la_cabeza = {id(parametro) for parametro in cabeza}
+    extractor = [p for p in modelo.parameters() if p.requires_grad and id(p) not in de_la_cabeza]
+    grupos = [{"params": cabeza, "lr": config.tasa_aprendizaje}]
+    if extractor:
+        grupos.append({"params": extractor, "lr": config.tasa_aprendizaje * config.factor_lr_extractor})
+    return torch.optim.Adam(grupos, weight_decay=config.regularizacion_l2)
+
+
 def ejecutar_experimento(config: ConfiguracionExperimento) -> dict:
     fijar_semilla(config.semilla)
     dispositivo = obtener_dispositivo()
     datos = crear_dataloaders(config.tamano, config.aumentado, config.repeticiones, config.tamano_lote)
     modelo = construir_modelo(config, len(datos.clases)).to(dispositivo)
-    optimizador = torch.optim.Adam(
-        modelo.parameters(), lr=config.tasa_aprendizaje, weight_decay=config.regularizacion_l2
-    )
     parada = ParadaTemprana(config.paciencia)
     print(f"*** {config.nombre} · {contar_parametros(modelo):,} parámetros · {describir_dispositivo(dispositivo)}")
 
     comienzo = time()
-    historial = entrenar(
-        modelo, datos.entrenamiento, datos.validacion, optimizador, nn.CrossEntropyLoss(), parada, dispositivo,
-        config.epocas,
-    )
+    historial = {metrica: [] for metrica in METRICAS_HISTORIAL}
+    for congelado, epocas in fases_entrenamiento(config):
+        congelar_extractor(modelo, config.modelo, congelado)
+        parada.reiniciar_paciencia()
+        fase = entrenar(
+            modelo, datos.entrenamiento, datos.validacion, crear_optimizador(modelo, config), nn.CrossEntropyLoss(),
+            parada, dispositivo, epocas, primera_epoca=len(historial["perdida_train"]) + 1,
+        )
+        for metrica in historial:
+            historial[metrica] += fase[metrica]
     segundos = time() - comienzo
 
     evaluacion = evaluar(modelo, datos.validacion, dispositivo, datos.clases)
@@ -83,6 +118,7 @@ def ejecutar_experimento(config: ConfiguracionExperimento) -> dict:
         "mejor_epoca": parada.mejor_epoca,
         "epocas_entrenadas": len(historial["perdida_train"]),
         "parametros": contar_parametros(modelo),
+        "ms_imagen": round(medir_milisegundos_por_imagen(modelo, config.tamano, dispositivo), 2),
         "segundos": round(segundos),
     }
     guardar_experimento(config, historial, evaluacion, modelo, resumen)

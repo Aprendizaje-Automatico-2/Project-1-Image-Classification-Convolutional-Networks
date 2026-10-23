@@ -125,6 +125,21 @@ def barras_experimentos(tabla: pd.DataFrame, referencia: str, titulo: str) -> Fi
     return figura
 
 
+def accuracy_frente_a_parametros(tabla: pd.DataFrame, titulo: str) -> Figure:
+    figura = Figure(figsize=(8, 5))
+    eje = figura.subplots()
+    eje.scatter(tabla["parametros"], tabla["acc_val"], s=60, color="tab:blue")
+    for _, fila in tabla.iterrows():
+        eje.annotate(fila["nombre"], (fila["parametros"], fila["acc_val"]), textcoords="offset points",
+                     xytext=(6, 4), fontsize=8)
+    eje.set_xscale("log")
+    eje.set_xlabel("Parámetros (escala logarítmica)")
+    eje.set_ylabel("Accuracy de validación")
+    eje.set_title(titulo)
+    eje.grid(True, alpha=0.3)
+    return figura
+
+
 def lote_de_ejemplo(imagenes: torch.Tensor, etiquetas: torch.Tensor, clases: list[str], columnas: int = 4) -> Figure:
     filas = len(imagenes) // columnas
     figura = Figure(figsize=(3 * columnas, 2.4 * filas))

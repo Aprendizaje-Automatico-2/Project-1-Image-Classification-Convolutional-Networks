@@ -1,0 +1,1 @@
+{"modelo": "resnet18", "estrategia": "ajuste_fino", "tamano": [224, 224], "epocas": 30, "paciencia": 5, "epocas_congelado": 5}

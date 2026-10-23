@@ -19,6 +19,7 @@ python -m fishcls ver-aumentado    # figuras del data augmentation en resultados
 python -m fishcls entrenar configuraciones/cnn/C01_base.json   # uno o varios experimentos
 python -m fishcls comparar C00_sin_aumentado C01_base --titulo "Con y sin DA" --salida comparativa
 python -m fishcls resumir 'C.*' --referencia C01_base --titulo "Búsqueda manual" --salida busqueda
+python -m fishcls entrenar configuraciones/transferencia/T02_convnext_tiny.json   # transfer learning
 python -m unittest discover tests
 ```
 
@@ -36,12 +37,12 @@ fishcls/
   utilidades.py   dispositivo, semillas, JSON
   datos.py        catálogo, agrupado, partición, preparación y DataLoaders
   aumentado.py    transformaciones de entrenamiento y evaluación
-  modelos.py      ConvNet configurable (parte de la red de la asignatura)
+  modelos.py      ConvNet configurable (parte de la red de la asignatura) y ResNet18 / ConvNeXt-Tiny preentrenadas
   entrenamiento.py  ParadaTemprana, bucle de entrenamiento y validación
   evaluacion.py   métricas y classification report
   experimento.py  configuración → datos → modelo → entrenamiento → resultados
   graficas.py     figuras
-configuraciones/  un JSON por experimento, solo con lo que cambia respecto a los valores por defecto
+configuraciones/  un JSON por experimento (cnn/ y transferencia/), solo con lo que cambia respecto a los valores por defecto
 tests/            unittest
 ```
 
