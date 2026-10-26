@@ -3,6 +3,7 @@ from typing import NamedTuple
 import numpy as np
 import torch
 import torch.nn as nn
+from scipy.stats import binomtest
 from sklearn.metrics import accuracy_score, classification_report, f1_score
 from torch.utils.data import DataLoader
 
@@ -21,6 +22,12 @@ class Evaluacion(NamedTuple):
     @property
     def f1_macro(self) -> float:
         return f1_score(self.y_real, self.y_pred, average="macro")
+
+    @property
+    def intervalo_wilson(self) -> tuple[float, float]:
+        aciertos = int((self.y_real == self.y_pred).sum())
+        intervalo = binomtest(aciertos, len(self.y_real)).proportion_ci(confidence_level=0.95, method="wilson")
+        return intervalo.low, intervalo.high
 
     def informe(self, como_diccionario: bool = False) -> str | dict:
         return classification_report(
