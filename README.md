@@ -20,6 +20,7 @@ python -m fishcls entrenar configuraciones/cnn/C01_base.json   # uno o varios ex
 python -m fishcls comparar C00_sin_aumentado C01_base --titulo "Con y sin DA" --salida comparativa
 python -m fishcls resumir 'C.*' --referencia C01_base --titulo "Búsqueda manual" --salida busqueda
 python -m fishcls entrenar configuraciones/transferencia/T02_convnext_tiny.json   # transfer learning
+python -m fishcls ajustar --pruebas 30   # Optuna; escribe configuraciones/optuna/O01_optuna_mejor.json
 python -m unittest discover tests
 ```
 
@@ -41,8 +42,9 @@ fishcls/
   entrenamiento.py  ParadaTemprana, bucle de entrenamiento y validación
   evaluacion.py   métricas y classification report
   experimento.py  configuración → datos → modelo → entrenamiento → resultados
+  ajuste.py       búsqueda automática con Optuna (TPE + poda por mediana) sobre la ConvNet
   graficas.py     figuras
-configuraciones/  un JSON por experimento (cnn/ y transferencia/), solo con lo que cambia respecto a los valores por defecto
+configuraciones/  un JSON por experimento (cnn/, transferencia/ y optuna/), solo con lo que cambia respecto a los valores por defecto
 tests/            unittest
 ```
 

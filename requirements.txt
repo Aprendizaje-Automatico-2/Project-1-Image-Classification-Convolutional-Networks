@@ -6,3 +6,4 @@ pandas==3.0.0
 scikit-learn==1.8.0
 matplotlib==3.10.8
 scipy==1.16.3
+optuna==5.0.0

@@ -9,6 +9,8 @@ CONFIGURACIONES = RAIZ / "configuraciones"
 EXPERIMENTOS = RAIZ / "resultados" / "experimentos"
 RESUMEN_EXPERIMENTOS = RAIZ / "resultados" / "resumen.csv"
 FIGURAS = RAIZ / "resultados" / "figuras"
+ESTUDIO_OPTUNA = RAIZ / "resultados" / "optuna.db"
+PRUEBAS_OPTUNA = RAIZ / "resultados" / "optuna_pruebas.csv"
 
 SEMILLA = 42
 EXTENSIONES_IMAGEN = (".png", ".jpg", ".jpeg")

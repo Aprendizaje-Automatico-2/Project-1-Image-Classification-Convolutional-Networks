@@ -1,0 +1,18 @@
+{
+  "filtros": [
+    8,
+    16,
+    32,
+    64,
+    128
+  ],
+  "neuronas_fc": [
+    256,
+    128
+  ],
+  "tamano_kernel": 3,
+  "dropout": 0.17767845605557436,
+  "batchnorm": true,
+  "tasa_aprendizaje": 0.00018989497803168352,
+  "regularizacion_l2": 0.00013365331120752878
+}

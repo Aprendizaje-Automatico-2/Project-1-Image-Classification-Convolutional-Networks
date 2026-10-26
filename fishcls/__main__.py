@@ -5,9 +5,16 @@ from pathlib import Path
 import torch
 import torchvision
 
-from fishcls.config import DATOS_PREPARADOS, SEMILLA, TAMANO_CNN
+from fishcls.ajuste import figuras_estudio, mejor_configuracion, optimizar
+from fishcls.config import CONFIGURACIONES, DATOS_PREPARADOS, PRUEBAS_OPTUNA, SEMILLA, TAMANO_CNN
 from fishcls.datos import abrir_imagen, crear_dataloaders, listar_imagenes, preparar_dataset, resumir_particion
-from fishcls.experimento import cargar_configuracion, cargar_historial, cargar_resumen, ejecutar_experimento
+from fishcls.experimento import (
+    cargar_configuracion,
+    cargar_historial,
+    cargar_resumen,
+    ejecutar_experimento,
+    guardar_configuracion,
+)
 from fishcls.graficas import (
     accuracy_frente_a_parametros,
     barras_experimentos,
@@ -61,6 +68,17 @@ def resumir(argumentos: argparse.Namespace) -> None:
     print(guardar_figura(accuracy_frente_a_parametros(tabla, argumentos.titulo), f"{argumentos.salida}_parametros.png"))
 
 
+def ajustar(argumentos: argparse.Namespace) -> None:
+    estudio = optimizar(argumentos.pruebas)
+    estudio.trials_dataframe().to_csv(PRUEBAS_OPTUNA, index=False)
+    for nombre, figura in figuras_estudio(estudio).items():
+        print(guardar_figura(figura, f"fase5_optuna_{nombre}.png"))
+    ruta = CONFIGURACIONES / "optuna" / "O01_optuna_mejor.json"
+    guardar_configuracion(mejor_configuracion(estudio, ruta.stem), ruta)
+    print(f"Mejor prueba {estudio.best_trial.number}: pérdida {estudio.best_value:.3g} · {estudio.best_params}")
+    print(f"Configuración ganadora → {ruta}")
+
+
 def construir_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="fishcls")
     comandos = parser.add_subparsers(dest="comando", required=True)
@@ -81,6 +99,9 @@ def construir_parser() -> argparse.ArgumentParser:
     resumir_parser.add_argument("--titulo", required=True)
     resumir_parser.add_argument("--salida", required=True)
     resumir_parser.set_defaults(ejecutar=resumir)
+    ajustar_parser = comandos.add_parser("ajustar", help="búsqueda automática de hiperparámetros con Optuna")
+    ajustar_parser.add_argument("--pruebas", type=int, default=30)
+    ajustar_parser.set_defaults(ejecutar=ajustar)
     return parser
 
 
