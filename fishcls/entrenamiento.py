@@ -1,4 +1,5 @@
 import copy
+from collections.abc import Callable
 from time import time
 
 import numpy as np
@@ -68,6 +69,7 @@ def entrenar(
     dispositivo: torch.device,
     epocas: int,
     primera_epoca: int = 1,
+    al_terminar_epoca: Callable[[int, float], None] | None = None,
 ) -> dict[str, list[float]]:
     historial = {metrica: [] for metrica in METRICAS_HISTORIAL}
     ultima_epoca = primera_epoca + epocas - 1
@@ -89,6 +91,8 @@ def entrenar(
             f"Val Loss: {perdida_val:.4f} | Val Acc: {historial['acc_val'][-1]:.4f} | "
             f"{estado} | {time() - comienzo:.1f}s"
         )
+        if al_terminar_epoca:
+            al_terminar_epoca(epoca, perdida_val)
         if detener:
             print(f"Parada temprana en la época {epoca}: la mejor fue la {parada.mejor_epoca} "
                   f"(Val Loss: {parada.mejor_perdida_val:.4f})")

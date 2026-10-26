@@ -1,3 +1,4 @@
+from collections.abc import Callable
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from time import time
@@ -53,6 +54,13 @@ def cargar_configuracion(ruta: Path) -> ConfiguracionExperimento:
     return ConfiguracionExperimento(nombre=ruta.stem, **valores)
 
 
+def guardar_configuracion(config: ConfiguracionExperimento, ruta: Path) -> None:
+    por_defecto = ConfiguracionExperimento(nombre=config.nombre)
+    cambios = {campo: valor for campo, valor in asdict(config).items()
+               if campo != "nombre" and valor != getattr(por_defecto, campo)}
+    guardar_json(cambios, ruta)
+
+
 def construir_modelo(config: ConfiguracionExperimento, num_clases: int) -> nn.Module:
     if config.modelo in PREENTRENADOS:
         return modelo_preentrenado(config.modelo, num_clases)
@@ -87,7 +95,11 @@ def crear_optimizador(modelo: nn.Module, config: ConfiguracionExperimento) -> to
     return torch.optim.Adam(grupos, weight_decay=config.regularizacion_l2)
 
 
-def ejecutar_experimento(config: ConfiguracionExperimento) -> dict:
+def ejecutar_experimento(
+    config: ConfiguracionExperimento,
+    al_terminar_epoca: Callable[[int, float], None] | None = None,
+    guardar: bool = True,
+) -> dict:
     fijar_semilla(config.semilla)
     dispositivo = obtener_dispositivo()
     datos = crear_dataloaders(config.tamano, config.aumentado, config.repeticiones, config.tamano_lote)
@@ -103,6 +115,7 @@ def ejecutar_experimento(config: ConfiguracionExperimento) -> dict:
         fase = entrenar(
             modelo, datos.entrenamiento, datos.validacion, crear_optimizador(modelo, config), nn.CrossEntropyLoss(),
             parada, dispositivo, epocas, primera_epoca=len(historial["perdida_train"]) + 1,
+            al_terminar_epoca=al_terminar_epoca,
         )
         for metrica in historial:
             historial[metrica] += fase[metrica]
@@ -114,14 +127,15 @@ def ejecutar_experimento(config: ConfiguracionExperimento) -> dict:
         "nombre": config.nombre,
         "acc_val": round(evaluacion.accuracy, 4),
         "f1_val": round(evaluacion.f1_macro, 4),
-        "perdida_val": round(parada.mejor_perdida_val, 4),
+        "perdida_val": float(f"{parada.mejor_perdida_val:.3g}"),
         "mejor_epoca": parada.mejor_epoca,
         "epocas_entrenadas": len(historial["perdida_train"]),
         "parametros": contar_parametros(modelo),
         "ms_imagen": round(medir_milisegundos_por_imagen(modelo, config.tamano, dispositivo), 2),
         "segundos": round(segundos),
     }
-    guardar_experimento(config, historial, evaluacion, modelo, resumen)
+    if guardar:
+        guardar_experimento(config, historial, evaluacion, modelo, resumen)
     return resumen
 
 
