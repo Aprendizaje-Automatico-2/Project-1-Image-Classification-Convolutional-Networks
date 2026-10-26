@@ -8,7 +8,7 @@ import torch
 import torch.nn as nn
 
 from fishcls.config import EXPERIMENTOS, RESUMEN_EXPERIMENTOS, SEMILLA, TAMANO_CNN
-from fishcls.datos import crear_dataloaders
+from fishcls.datos import Datos, crear_dataloaders
 from fishcls.entrenamiento import METRICAS_HISTORIAL, ParadaTemprana, entrenar
 from fishcls.evaluacion import Evaluacion, evaluar
 from fishcls.graficas import curvas_entrenamiento, guardar_figura, matriz_confusion
@@ -180,12 +180,17 @@ def cargar_modelo(
     return modelo.to(dispositivo)
 
 
-def evaluar_en_test(nombre: str) -> dict:
+def cargar_experimento(nombre: str, dispositivo: torch.device) -> tuple[ConfiguracionExperimento, nn.Module, Datos]:
     carpeta = EXPERIMENTOS / nombre
     config = cargar_configuracion(carpeta / "configuracion.json")
-    dispositivo = obtener_dispositivo()
     datos = crear_dataloaders(config.tamano, tamano_lote=config.tamano_lote)
-    modelo = cargar_modelo(carpeta, config, len(datos.clases), dispositivo)
+    return config, cargar_modelo(carpeta, config, len(datos.clases), dispositivo), datos
+
+
+def evaluar_en_test(nombre: str) -> dict:
+    carpeta = EXPERIMENTOS / nombre
+    dispositivo = obtener_dispositivo()
+    _, modelo, datos = cargar_experimento(nombre, dispositivo)
     evaluacion = evaluar(modelo, datos.test, dispositivo, datos.clases)
     print(f"\n=== Classification report: TEST ({nombre}) ===\n{evaluacion.informe()}")
     inferior, superior = evaluacion.intervalo_wilson
