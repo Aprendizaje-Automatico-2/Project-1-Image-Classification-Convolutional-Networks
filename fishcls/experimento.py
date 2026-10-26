@@ -51,7 +51,7 @@ class ConfiguracionExperimento:
 
 def cargar_configuracion(ruta: Path) -> ConfiguracionExperimento:
     valores = {clave: tuple(valor) if isinstance(valor, list) else valor for clave, valor in cargar_json(ruta).items()}
-    return ConfiguracionExperimento(nombre=ruta.stem, **valores)
+    return ConfiguracionExperimento(**{"nombre": ruta.stem, **valores})
 
 
 def guardar_configuracion(config: ConfiguracionExperimento, ruta: Path) -> None:
@@ -170,3 +170,34 @@ def cargar_resumen(patron: str) -> pd.DataFrame:
 
 def cargar_historial(nombre: str) -> dict[str, list[float]]:
     return pd.read_csv(EXPERIMENTOS / nombre / "historial.csv", index_col="epoca").to_dict(orient="list")
+
+
+def cargar_modelo(
+    carpeta: Path, config: ConfiguracionExperimento, num_clases: int, dispositivo: torch.device
+) -> nn.Module:
+    modelo = construir_modelo(config, num_clases)
+    modelo.load_state_dict(torch.load(carpeta / "modelo.pt", map_location=dispositivo))
+    return modelo.to(dispositivo)
+
+
+def evaluar_en_test(nombre: str) -> dict:
+    carpeta = EXPERIMENTOS / nombre
+    config = cargar_configuracion(carpeta / "configuracion.json")
+    dispositivo = obtener_dispositivo()
+    datos = crear_dataloaders(config.tamano, tamano_lote=config.tamano_lote)
+    modelo = cargar_modelo(carpeta, config, len(datos.clases), dispositivo)
+    evaluacion = evaluar(modelo, datos.test, dispositivo, datos.clases)
+    print(f"\n=== Classification report: TEST ({nombre}) ===\n{evaluacion.informe()}")
+    inferior, superior = evaluacion.intervalo_wilson
+    resumen = {
+        "nombre": nombre,
+        "acc_test": round(evaluacion.accuracy, 4),
+        "ic_inferior": round(inferior, 4),
+        "ic_superior": round(superior, 4),
+        "f1_test": round(evaluacion.f1_macro, 4),
+        "imagenes": len(evaluacion.y_real),
+        "parametros": contar_parametros(modelo),
+    }
+    guardar_json({**resumen, "informe_test": evaluacion.informe(como_diccionario=True)}, carpeta / "metricas_test.json")
+    guardar_figura(matriz_confusion(evaluacion, f"{nombre} · test"), "matriz_confusion_test.png", carpeta)
+    return resumen

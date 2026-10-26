@@ -2,17 +2,19 @@ import argparse
 import platform
 from pathlib import Path
 
+import pandas as pd
 import torch
 import torchvision
 
 from fishcls.ajuste import figuras_estudio, mejor_configuracion, optimizar
-from fishcls.config import CONFIGURACIONES, DATOS_PREPARADOS, PRUEBAS_OPTUNA, SEMILLA, TAMANO_CNN
+from fishcls.config import CONFIGURACIONES, DATOS_PREPARADOS, PRUEBAS_OPTUNA, RESUMEN_TEST, SEMILLA, TAMANO_CNN
 from fishcls.datos import abrir_imagen, crear_dataloaders, listar_imagenes, preparar_dataset, resumir_particion
 from fishcls.experimento import (
     cargar_configuracion,
     cargar_historial,
     cargar_resumen,
     ejecutar_experimento,
+    evaluar_en_test,
     guardar_configuracion,
 )
 from fishcls.graficas import (
@@ -79,6 +81,14 @@ def ajustar(argumentos: argparse.Namespace) -> None:
     print(f"Configuración ganadora → {ruta}")
 
 
+def evaluar(argumentos: argparse.Namespace) -> None:
+    tabla = pd.DataFrame([evaluar_en_test(nombre) for nombre in argumentos.experimentos])
+    tabla.to_csv(RESUMEN_TEST, index=False)
+    print(tabla.to_string(index=False))
+    figura = accuracy_frente_a_parametros(tabla, argumentos.titulo, "acc_test", "Accuracy de test (IC 95 % de Wilson)")
+    print(guardar_figura(figura, f"{argumentos.salida}.png"))
+
+
 def construir_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="fishcls")
     comandos = parser.add_subparsers(dest="comando", required=True)
@@ -102,6 +112,11 @@ def construir_parser() -> argparse.ArgumentParser:
     ajustar_parser = comandos.add_parser("ajustar", help="búsqueda automática de hiperparámetros con Optuna")
     ajustar_parser.add_argument("--pruebas", type=int, default=30)
     ajustar_parser.set_defaults(ejecutar=ajustar)
+    evaluar_parser = comandos.add_parser("evaluar", help="evalúa en test los experimentos finalistas")
+    evaluar_parser.add_argument("experimentos", nargs="+")
+    evaluar_parser.add_argument("--titulo", required=True)
+    evaluar_parser.add_argument("--salida", required=True)
+    evaluar_parser.set_defaults(ejecutar=evaluar)
     return parser
 
 
