@@ -7,7 +7,15 @@ import torch
 import torchvision
 
 from fishcls.ajuste import figuras_estudio, mejor_configuracion, optimizar
-from fishcls.config import CONFIGURACIONES, DATOS_PREPARADOS, PRUEBAS_OPTUNA, RESUMEN_TEST, SEMILLA, TAMANO_CNN
+from fishcls.config import (
+    ABLACION_FECHA,
+    CONFIGURACIONES,
+    DATOS_PREPARADOS,
+    PRUEBAS_OPTUNA,
+    RESUMEN_TEST,
+    SEMILLA,
+    TAMANO_CNN,
+)
 from fishcls.datos import abrir_imagen, crear_dataloaders, listar_imagenes, preparar_dataset, resumir_particion
 from fishcls.experimento import (
     cargar_configuracion,
@@ -19,13 +27,14 @@ from fishcls.experimento import (
 )
 from fishcls.graficas import (
     accuracy_frente_a_parametros,
+    barras_ablacion,
     barras_experimentos,
     comparar_historiales,
     galeria_aumentado,
     guardar_figura,
     lote_de_ejemplo,
 )
-from fishcls.interpretacion import figuras_gradcam
+from fishcls.interpretacion import ablacion_fecha, figuras_gradcam
 from fishcls.utilidades import describir_dispositivo, fijar_semilla, obtener_dispositivo
 
 
@@ -95,6 +104,13 @@ def gradcam(argumentos: argparse.Namespace) -> None:
         print(guardar_figura(figura, f"{argumentos.salida}_{nombre}.png"))
 
 
+def tapar_fecha(argumentos: argparse.Namespace) -> None:
+    tabla = ablacion_fecha(argumentos.experimentos)
+    tabla.to_csv(ABLACION_FECHA, index=False)
+    print(tabla.to_string(index=False))
+    print(guardar_figura(barras_ablacion(tabla, argumentos.titulo), f"{argumentos.salida}.png"))
+
+
 def construir_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="fishcls")
     comandos = parser.add_subparsers(dest="comando", required=True)
@@ -127,6 +143,11 @@ def construir_parser() -> argparse.ArgumentParser:
     gradcam_parser.add_argument("experimentos", nargs="+")
     gradcam_parser.add_argument("--salida", required=True)
     gradcam_parser.set_defaults(ejecutar=gradcam)
+    fecha_parser = comandos.add_parser("tapar-fecha", help="test con la fecha impresa tapada y una esquina de control")
+    fecha_parser.add_argument("experimentos", nargs="+")
+    fecha_parser.add_argument("--titulo", required=True)
+    fecha_parser.add_argument("--salida", required=True)
+    fecha_parser.set_defaults(ejecutar=tapar_fecha)
     return parser
 
 

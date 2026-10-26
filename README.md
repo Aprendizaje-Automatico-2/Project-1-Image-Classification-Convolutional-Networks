@@ -23,6 +23,7 @@ python -m fishcls entrenar configuraciones/transferencia/T02_convnext_tiny.json 
 python -m fishcls ajustar --pruebas 30   # Optuna; escribe configuraciones/optuna/O01_optuna_mejor.json
 python -m fishcls evaluar C10a_cuatro_bloques_dos_fc T02_convnext_tiny --titulo "Finalistas en test" --salida test   # una sola vez, al final
 python -m fishcls gradcam C10a_cuatro_bloques_dos_fc T02_convnext_tiny --salida gradcam   # qué mira cada red en test
+python -m fishcls tapar-fecha C10a_cuatro_bloques_dos_fc T02_convnext_tiny --titulo "Fecha tapada" --salida fecha   # ¿usa la red la fecha impresa?
 python -m unittest discover tests
 ```
 
@@ -45,7 +46,7 @@ fishcls/
   evaluacion.py   métricas, classification report e intervalo de Wilson
   experimento.py  configuración → datos → modelo → entrenamiento → resultados; recarga y evaluación en test
   ajuste.py       búsqueda automática con Optuna (TPE + poda por mediana) sobre la ConvNet
-  interpretacion.py  Grad-CAM sobre la última capa convolucional
+  interpretacion.py  Grad-CAM sobre la última capa convolucional y test con la fecha impresa tapada
   graficas.py     figuras
 configuraciones/  un JSON por experimento (cnn/, transferencia/ y optuna/), solo con lo que cambia respecto a los valores por defecto
 tests/            unittest

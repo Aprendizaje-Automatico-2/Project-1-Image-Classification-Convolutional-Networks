@@ -9,6 +9,7 @@ CONFIGURACIONES = RAIZ / "configuraciones"
 EXPERIMENTOS = RAIZ / "resultados" / "experimentos"
 RESUMEN_EXPERIMENTOS = RAIZ / "resultados" / "resumen.csv"
 RESUMEN_TEST = RAIZ / "resultados" / "test.csv"
+ABLACION_FECHA = RAIZ / "resultados" / "ablacion_fecha.csv"
 FIGURAS = RAIZ / "resultados" / "figuras"
 ESTUDIO_OPTUNA = RAIZ / "resultados" / "optuna.db"
 PRUEBAS_OPTUNA = RAIZ / "resultados" / "optuna_pruebas.csv"
@@ -29,5 +30,7 @@ DESVIACION_IMAGENET = (0.229, 0.224, 0.225)
 LADO_HUELLA = 16
 UMBRAL_CASI_DUPLICADO = 6
 ANCHO_MINIMO_KODAK = 2000
+ZONA_FECHA = (0.74, 0.83, 0.96, 0.92)
+ZONA_CONTROL = (0.04, 0.83, 0.26, 0.92)
 
 NUM_PROCESOS = min(4, os.cpu_count() or 1)

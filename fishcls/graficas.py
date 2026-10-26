@@ -165,6 +165,23 @@ def cuadricula_gradcam(
     return figura
 
 
+def barras_ablacion(tabla: pd.DataFrame, titulo: str) -> Figure:
+    figura = Figure(figsize=(13, 4.5), layout="constrained")
+    for eje, (fotos, grupo) in zip(figura.subplots(1, 2, sharey=True), tabla.groupby("fotos", sort=False)):
+        barras = grupo.pivot(index="nombre", columns="condicion", values="acc_test")
+        barras = barras.reindex(index=grupo["nombre"].unique(), columns=grupo["condicion"].unique())
+        barras.rename(index=lambda nombre: nombre.split("_")[0]).plot.bar(ax=eje, rot=0, color=COLORES, legend=False)
+        for barra in eje.containers:
+            eje.bar_label(barra, fmt="%.2f", fontsize=7)
+        eje.set_title(f"Fotos {fotos} ({grupo['imagenes'].iloc[0]} imágenes de test)")
+        eje.set_xlabel("")
+        eje.set_ylabel("Accuracy de test")
+        eje.grid(True, axis="y", alpha=0.3)
+    figura.legend(*eje.get_legend_handles_labels(), loc="outside lower center", ncols=3, fontsize=9)
+    figura.suptitle(titulo)
+    return figura
+
+
 def lote_de_ejemplo(imagenes: torch.Tensor, etiquetas: torch.Tensor, clases: list[str], columnas: int = 4) -> Figure:
     filas = len(imagenes) // columnas
     figura = Figure(figsize=(3 * columnas, 2.4 * filas))
