@@ -25,6 +25,7 @@ from fishcls.graficas import (
     guardar_figura,
     lote_de_ejemplo,
 )
+from fishcls.interpretacion import figuras_gradcam
 from fishcls.utilidades import describir_dispositivo, fijar_semilla, obtener_dispositivo
 
 
@@ -89,6 +90,11 @@ def evaluar(argumentos: argparse.Namespace) -> None:
     print(guardar_figura(figura, f"{argumentos.salida}.png"))
 
 
+def gradcam(argumentos: argparse.Namespace) -> None:
+    for nombre, figura in figuras_gradcam(argumentos.experimentos).items():
+        print(guardar_figura(figura, f"{argumentos.salida}_{nombre}.png"))
+
+
 def construir_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="fishcls")
     comandos = parser.add_subparsers(dest="comando", required=True)
@@ -117,6 +123,10 @@ def construir_parser() -> argparse.ArgumentParser:
     evaluar_parser.add_argument("--titulo", required=True)
     evaluar_parser.add_argument("--salida", required=True)
     evaluar_parser.set_defaults(ejecutar=evaluar)
+    gradcam_parser = comandos.add_parser("gradcam", help="mapas Grad-CAM de los finalistas sobre test")
+    gradcam_parser.add_argument("experimentos", nargs="+")
+    gradcam_parser.add_argument("--salida", required=True)
+    gradcam_parser.set_defaults(ejecutar=gradcam)
     return parser
 
 

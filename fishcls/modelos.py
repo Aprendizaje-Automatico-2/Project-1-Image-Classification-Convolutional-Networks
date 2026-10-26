@@ -9,6 +9,8 @@ PREENTRENADOS = {
     "convnext_tiny": (models.convnext_tiny, models.ConvNeXt_Tiny_Weights.IMAGENET1K_V1, "classifier"),
 }
 
+CAPAS_GRADCAM = {"resnet18": "layer4", "convnext_tiny": "features"}
+
 ACTIVACIONES = {
     "relu": nn.ReLU,
     "leaky_relu": nn.LeakyReLU,
@@ -85,6 +87,12 @@ def congelar_extractor(modelo: nn.Module, nombre: str, congelar: bool) -> None:
     cabeza = {id(parametro) for parametro in parametros_cabeza(modelo, nombre)}
     for parametro in modelo.parameters():
         parametro.requires_grad = id(parametro) in cabeza or not congelar
+
+
+def capa_gradcam(modelo: nn.Module, nombre: str) -> nn.Module:
+    if nombre in CAPAS_GRADCAM:
+        return getattr(modelo, CAPAS_GRADCAM[nombre])
+    return [capa for capa in modelo.convoluciones if isinstance(capa, nn.Sequential)][-1]
 
 
 def contar_parametros(modelo: nn.Module) -> int:
