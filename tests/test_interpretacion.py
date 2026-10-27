@@ -4,8 +4,8 @@ import torch
 import torch.nn as nn
 
 from fishcls.experimento import ConfiguracionExperimento, construir_modelo
-from fishcls.interpretacion import TaparZona, mapa_gradcam
-from fishcls.modelos import PREENTRENADOS, capa_gradcam, modelo_preentrenado
+from fishcls.interpretacion import TaparZona, capa_gradcam, mapa_gradcam
+from fishcls.modelos.preentrenados import PREENTRENADOS, modelo_preentrenado
 
 
 def salida_de(capa: nn.Module, modelo: nn.Module, imagenes: torch.Tensor) -> torch.Tensor:

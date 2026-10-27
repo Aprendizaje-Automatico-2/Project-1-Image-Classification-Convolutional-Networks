@@ -13,9 +13,9 @@ from fishcls.datos.cargadores import Datos, crear_dataloaders
 from fishcls.evaluacion import evaluar
 from fishcls.experimento import ConfiguracionExperimento, cargar_experimento
 from fishcls.graficas import cuadricula_gradcam
-from fishcls.modelos import capa_gradcam
 from fishcls.utilidades import cargar_json, obtener_dispositivo
 
+CAPAS_GRADCAM = {"resnet18": "layer4", "convnext_tiny": "features"}
 TITULOS_GRADCAM = {
     "fallos": "Grad-CAM de las imágenes de test que falla algún finalista",
     "aciertos": "Grad-CAM de un acierto de todos los finalistas por clase",
@@ -34,6 +34,12 @@ class TaparZona(nn.Module):
         tapadas = imagenes.clone()
         tapadas[..., round(arriba * alto):round(abajo * alto), round(izquierda * ancho):round(derecha * ancho)] = 0
         return tapadas
+
+
+def capa_gradcam(modelo: nn.Module, nombre: str) -> nn.Module:
+    if nombre in CAPAS_GRADCAM:
+        return getattr(modelo, CAPAS_GRADCAM[nombre])
+    return [capa for capa in modelo.convoluciones if isinstance(capa, nn.Sequential)][-1]
 
 
 def mapa_gradcam(modelo: nn.Module, capa: nn.Module, imagen: torch.Tensor, clase: int) -> np.ndarray:

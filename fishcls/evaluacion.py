@@ -7,7 +7,7 @@ from scipy.stats import binomtest
 from sklearn.metrics import accuracy_score, classification_report, f1_score
 from torch.utils.data import DataLoader
 
-from fishcls.entrenamiento import ejecutar_epoca
+from fishcls.entrenamiento.bucle import ejecutar_epoca
 
 
 class Evaluacion(NamedTuple):

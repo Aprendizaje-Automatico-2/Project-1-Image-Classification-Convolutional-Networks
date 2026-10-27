@@ -9,18 +9,13 @@ import torch.nn as nn
 
 from fishcls.config import EXPERIMENTOS, RESUMEN_EXPERIMENTOS, SEMILLA, TAMANO_CNN
 from fishcls.datos.cargadores import Datos, crear_dataloaders
-from fishcls.entrenamiento import METRICAS_HISTORIAL, ParadaTemprana, entrenar
+from fishcls.entrenamiento.bucle import METRICAS_HISTORIAL, entrenar
+from fishcls.entrenamiento.parada_temprana import ParadaTemprana
 from fishcls.evaluacion import Evaluacion, evaluar
 from fishcls.graficas import curvas_entrenamiento, guardar_figura, matriz_confusion
-from fishcls.modelos import (
-    PREENTRENADOS,
-    ConvNet,
-    congelar_extractor,
-    contar_parametros,
-    medir_milisegundos_por_imagen,
-    modelo_preentrenado,
-    parametros_cabeza,
-)
+from fishcls.modelos.convnet import ConvNet
+from fishcls.modelos.medidas import contar_parametros, medir_milisegundos_por_imagen
+from fishcls.modelos.preentrenados import PREENTRENADOS, congelar_extractor, modelo_preentrenado, parametros_cabeza
 from fishcls.utilidades import cargar_json, describir_dispositivo, fijar_semilla, guardar_json, obtener_dispositivo
 
 

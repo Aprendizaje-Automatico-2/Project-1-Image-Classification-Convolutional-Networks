@@ -7,7 +7,7 @@ from pathlib import Path
 import torch
 import torch.nn as nn
 
-from fishcls.entrenamiento import ParadaTemprana
+from fishcls.entrenamiento.parada_temprana import ParadaTemprana
 from fishcls.experimento import (
     ConfiguracionExperimento,
     cargar_configuracion,
@@ -16,7 +16,8 @@ from fishcls.experimento import (
     crear_optimizador,
     fases_entrenamiento,
 )
-from fishcls.modelos import ACTIVACIONES, PREENTRENADOS, congelar_extractor, modelo_preentrenado, parametros_cabeza
+from fishcls.modelos.convnet import ACTIVACIONES
+from fishcls.modelos.preentrenados import PREENTRENADOS, congelar_extractor, modelo_preentrenado, parametros_cabeza
 from fishcls.utilidades import guardar_json
 
 TAMANO_PEQUENO = (48, 64)

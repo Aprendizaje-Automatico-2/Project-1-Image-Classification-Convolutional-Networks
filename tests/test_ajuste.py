@@ -9,7 +9,8 @@ from matplotlib.text import Text
 from torch.utils.data import DataLoader, TensorDataset
 
 from fishcls.ajuste import configuracion_sugerida, figuras_estudio, informar_a_optuna
-from fishcls.entrenamiento import ParadaTemprana, entrenar
+from fishcls.entrenamiento.bucle import entrenar
+from fishcls.entrenamiento.parada_temprana import ParadaTemprana
 from fishcls.experimento import cargar_configuracion, guardar_configuracion
 from fishcls.utilidades import cargar_json
 
