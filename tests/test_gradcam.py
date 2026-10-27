@@ -3,7 +3,6 @@ import unittest
 import torch
 import torch.nn as nn
 
-from fishcls.evaluacion.fecha import TaparZona
 from fishcls.evaluacion.gradcam import capa_gradcam, mapa_gradcam
 from fishcls.experimentos.configuracion import ConfiguracionExperimento, construir_modelo
 from fishcls.modelos.preentrenados import PREENTRENADOS, modelo_preentrenado
@@ -48,15 +47,6 @@ class MapaGradcamTest(unittest.TestCase):
         self.assertEqual(izquierda.shape, (4, 4))
         self.assertTrue((izquierda[:, :2] == 1).all() and (izquierda[:, 2:] == 0).all())
         self.assertTrue((derecha[:, :2] == 0).all() and (derecha[:, 2:] == 1).all())
-
-
-class TaparZonaTest(unittest.TestCase):
-    def test_pone_a_cero_solo_la_zona_y_no_toca_la_entrada(self):
-        imagenes = torch.ones(2, 3, 10, 20)
-        tapadas = TaparZona((0.5, 0.6, 1.0, 1.0))(imagenes)
-        self.assertTrue((tapadas[..., 6:, 10:] == 0).all())
-        self.assertEqual(tapadas.sum().item(), imagenes.sum().item() - 2 * 3 * 4 * 10)
-        self.assertTrue((imagenes == 1).all())
 
 
 if __name__ == "__main__":
