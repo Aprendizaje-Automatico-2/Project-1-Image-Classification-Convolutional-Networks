@@ -8,14 +8,9 @@ import torch
 import torch.nn as nn
 
 from fishcls.entrenamiento.parada_temprana import ParadaTemprana
-from fishcls.experimento import (
-    ConfiguracionExperimento,
-    cargar_configuracion,
-    cargar_modelo,
-    construir_modelo,
-    crear_optimizador,
-    fases_entrenamiento,
-)
+from fishcls.experimentos.configuracion import ConfiguracionExperimento, cargar_configuracion, construir_modelo
+from fishcls.experimentos.ejecucion import crear_optimizador, fases_entrenamiento
+from fishcls.experimentos.resultados import cargar_modelo
 from fishcls.modelos.convnet import ACTIVACIONES
 from fishcls.modelos.preentrenados import PREENTRENADOS, congelar_extractor, modelo_preentrenado, parametros_cabeza
 from fishcls.utilidades import guardar_json

@@ -6,7 +6,6 @@ import pandas as pd
 import torch
 import torchvision
 
-from fishcls.ajuste import figuras_estudio, mejor_configuracion, optimizar
 from fishcls.config import (
     ABLACION_FECHA,
     CONFIGURACIONES,
@@ -17,24 +16,17 @@ from fishcls.config import (
     TAMANO_CNN,
 )
 from fishcls.datos.cargadores import crear_dataloaders
-from fishcls.experimento import (
-    cargar_configuracion,
-    cargar_historial,
-    cargar_resumen,
-    ejecutar_experimento,
-    evaluar_en_test,
-    guardar_configuracion,
-)
-from fishcls.graficas import (
-    accuracy_frente_a_parametros,
-    barras_ablacion,
-    barras_experimentos,
-    comparar_historiales,
-    galeria_aumentado,
-    guardar_figura,
-    lote_de_ejemplo,
-)
-from fishcls.interpretacion import ablacion_fecha, figuras_gradcam
+from fishcls.evaluacion.fecha import ablacion_fecha
+from fishcls.evaluacion.finalistas import evaluar_en_test
+from fishcls.evaluacion.gradcam import figuras_gradcam
+from fishcls.experimentos.ajuste import figuras_estudio, mejor_configuracion, optimizar
+from fishcls.experimentos.configuracion import cargar_configuracion, guardar_configuracion
+from fishcls.experimentos.ejecucion import ejecutar_experimento
+from fishcls.experimentos.resultados import cargar_historial, cargar_resumen
+from fishcls.graficas.comparativas import accuracy_frente_a_parametros, barras_ablacion, barras_experimentos
+from fishcls.graficas.comun import guardar_figura
+from fishcls.graficas.curvas import comparar_historiales
+from fishcls.graficas.imagenes import galeria_aumentado, lote_de_ejemplo
 from fishcls.preparacion.imagenes import abrir_imagen, listar_imagenes
 from fishcls.preparacion.preparar import preparar_dataset, resumir_particion
 from fishcls.utilidades import describir_dispositivo, fijar_semilla, obtener_dispositivo

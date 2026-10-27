@@ -2,7 +2,7 @@ import unittest
 
 import numpy as np
 
-from fishcls.evaluacion import Evaluacion
+from fishcls.evaluacion.metricas import Evaluacion
 
 
 def evaluacion_con(aciertos: int, imagenes: int) -> Evaluacion:

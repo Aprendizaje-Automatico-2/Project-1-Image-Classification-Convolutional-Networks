@@ -6,7 +6,8 @@ from matplotlib.figure import Figure
 from optuna.visualization import matplotlib as visualizacion
 
 from fishcls.config import ESTUDIO_OPTUNA, SEMILLA
-from fishcls.experimento import ConfiguracionExperimento, ejecutar_experimento
+from fishcls.experimentos.configuracion import ConfiguracionExperimento
+from fishcls.experimentos.ejecucion import ejecutar_experimento
 
 NOMBRE_ESTUDIO = "convnet"
 OBJETIVO = "Pérdida de validación"

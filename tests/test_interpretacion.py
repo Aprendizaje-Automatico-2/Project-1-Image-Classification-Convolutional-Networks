@@ -3,8 +3,9 @@ import unittest
 import torch
 import torch.nn as nn
 
-from fishcls.experimento import ConfiguracionExperimento, construir_modelo
-from fishcls.interpretacion import TaparZona, capa_gradcam, mapa_gradcam
+from fishcls.evaluacion.fecha import TaparZona
+from fishcls.evaluacion.gradcam import capa_gradcam, mapa_gradcam
+from fishcls.experimentos.configuracion import ConfiguracionExperimento, construir_modelo
 from fishcls.modelos.preentrenados import PREENTRENADOS, modelo_preentrenado
 
 
