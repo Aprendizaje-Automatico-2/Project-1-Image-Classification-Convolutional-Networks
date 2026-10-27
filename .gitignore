@@ -12,3 +12,4 @@ __pycache__/
 *.pdf
 !README.md
 *.ipynb
+*.zip
