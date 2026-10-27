@@ -8,7 +8,7 @@ from matplotlib.figure import Figure
 from PIL import Image
 from sklearn.metrics import ConfusionMatrixDisplay
 
-from fishcls.aumentado import AUMENTADOS, transformaciones_entrenamiento, transformaciones_evaluacion
+from fishcls.datos.aumentado import AUMENTADOS, transformaciones_entrenamiento, transformaciones_evaluacion
 from fishcls.config import DESVIACION_IMAGENET, FIGURAS, MEDIA_IMAGENET
 from fishcls.evaluacion import Evaluacion
 

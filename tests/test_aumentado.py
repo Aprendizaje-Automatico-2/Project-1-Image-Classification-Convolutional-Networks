@@ -4,7 +4,7 @@ import numpy as np
 import torch
 from PIL import Image
 
-from fishcls.aumentado import AUMENTADOS, transformaciones_entrenamiento, transformaciones_evaluacion
+from fishcls.datos.aumentado import AUMENTADOS, transformaciones_entrenamiento, transformaciones_evaluacion
 from fishcls.config import TAMANO_CNN, TAMANO_PREPARADO
 
 

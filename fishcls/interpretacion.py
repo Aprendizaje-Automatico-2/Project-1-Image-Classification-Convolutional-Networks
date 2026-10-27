@@ -9,7 +9,7 @@ from matplotlib.figure import Figure
 from torchvision.datasets import ImageFolder
 
 from fishcls.config import ANCHO_MINIMO_KODAK, PARTICION, RAIZ, TAMANO_CNN, ZONA_CONTROL, ZONA_FECHA
-from fishcls.datos import Datos, crear_dataloaders
+from fishcls.datos.cargadores import Datos, crear_dataloaders
 from fishcls.evaluacion import evaluar
 from fishcls.experimento import ConfiguracionExperimento, cargar_experimento
 from fishcls.graficas import cuadricula_gradcam

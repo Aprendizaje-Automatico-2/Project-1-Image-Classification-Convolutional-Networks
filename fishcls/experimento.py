@@ -8,7 +8,7 @@ import torch
 import torch.nn as nn
 
 from fishcls.config import EXPERIMENTOS, RESUMEN_EXPERIMENTOS, SEMILLA, TAMANO_CNN
-from fishcls.datos import Datos, crear_dataloaders
+from fishcls.datos.cargadores import Datos, crear_dataloaders
 from fishcls.entrenamiento import METRICAS_HISTORIAL, ParadaTemprana, entrenar
 from fishcls.evaluacion import Evaluacion, evaluar
 from fishcls.graficas import curvas_entrenamiento, guardar_figura, matriz_confusion

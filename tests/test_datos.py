@@ -4,7 +4,9 @@ from collections import Counter
 import numpy as np
 
 from fishcls.config import DATOS_PREPARADOS, PARTICION, PARTICIONES, RAIZ, TAMANO_CNN
-from fishcls.datos import agrupar_casi_duplicados, crear_dataloaders, dividir_por_grupos
+from fishcls.datos.cargadores import crear_dataloaders
+from fishcls.preparacion.duplicados import agrupar_casi_duplicados
+from fishcls.preparacion.particion import dividir_por_grupos
 from fishcls.utilidades import cargar_json
 
 

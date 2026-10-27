@@ -16,7 +16,7 @@ from fishcls.config import (
     SEMILLA,
     TAMANO_CNN,
 )
-from fishcls.datos import abrir_imagen, crear_dataloaders, listar_imagenes, preparar_dataset, resumir_particion
+from fishcls.datos.cargadores import crear_dataloaders
 from fishcls.experimento import (
     cargar_configuracion,
     cargar_historial,
@@ -35,6 +35,8 @@ from fishcls.graficas import (
     lote_de_ejemplo,
 )
 from fishcls.interpretacion import ablacion_fecha, figuras_gradcam
+from fishcls.preparacion.imagenes import abrir_imagen, listar_imagenes
+from fishcls.preparacion.preparar import preparar_dataset, resumir_particion
 from fishcls.utilidades import describir_dispositivo, fijar_semilla, obtener_dispositivo
 
 
