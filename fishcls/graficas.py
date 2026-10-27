@@ -135,7 +135,7 @@ def accuracy_frente_a_parametros(
         errores = [tabla[columna] - tabla["ic_inferior"], tabla["ic_superior"] - tabla[columna]]
     eje.errorbar(tabla["parametros"], tabla[columna], yerr=errores, fmt="o", markersize=8, capsize=4, color="tab:blue")
     for _, fila in tabla.iterrows():
-        eje.annotate(fila["nombre"], (fila["parametros"], fila[columna]), textcoords="offset points",
+        eje.annotate(fila["nombre"].split("_")[0], (fila["parametros"], fila[columna]), textcoords="offset points",
                      xytext=(6, 4), fontsize=8)
     eje.set_xscale("log")
     eje.set_xlabel("Parámetros (escala logarítmica)")
