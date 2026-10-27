@@ -5,7 +5,7 @@ Práctica 1 de Aprendizaje Automático II (2026-27): clasificador de imágenes e
 ## Entorno
 
 ```bash
-conda activate Aprendizaje_Automatico
+pip install -r requirements.txt   # con Python 3.14
 python -m fishcls info
 ```
 
