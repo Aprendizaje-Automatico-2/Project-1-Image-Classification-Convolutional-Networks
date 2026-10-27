@@ -1,6 +1,7 @@
 from collections.abc import Callable
 
 import optuna
+from matplotlib.axes import Axes
 from matplotlib.figure import Figure
 from optuna.visualization import matplotlib as visualizacion
 
@@ -8,11 +9,12 @@ from fishcls.config import ESTUDIO_OPTUNA, SEMILLA
 from fishcls.experimento import ConfiguracionExperimento, ejecutar_experimento
 
 NOMBRE_ESTUDIO = "convnet"
-FIGURAS_OPTUNA = {
-    "historia": visualizacion.plot_optimization_history,
-    "importancia": visualizacion.plot_param_importances,
-    "coordenadas_paralelas": visualizacion.plot_parallel_coordinate,
-    "valores_intermedios": visualizacion.plot_intermediate_values,
+OBJETIVO = "Pérdida de validación"
+TEXTOS_FIGURAS = {
+    "historia": ("Historia de la búsqueda", "Prueba", OBJETIVO),
+    "importancia": ("Importancia de cada hiperparámetro (fANOVA)", "Importancia", "Hiperparámetro"),
+    "coordenadas_paralelas": ("Coordenadas paralelas", "", ""),
+    "valores_intermedios": ("Pérdida de validación en cada época", "Época", OBJETIVO),
 }
 
 
@@ -72,8 +74,25 @@ def mejor_configuracion(estudio: optuna.Study, nombre: str) -> ConfiguracionExpe
     return configuracion_sugerida(optuna.trial.FixedTrial(estudio.best_params), nombre)
 
 
+def dibujar_estudio(estudio: optuna.Study) -> dict[str, Axes]:
+    importancia = optuna.importance.FanovaImportanceEvaluator(seed=SEMILLA)
+    return {
+        "historia": visualizacion.plot_optimization_history(estudio, target_name=OBJETIVO),
+        "importancia": visualizacion.plot_param_importances(estudio, evaluator=importancia, target_name=OBJETIVO),
+        "coordenadas_paralelas": visualizacion.plot_parallel_coordinate(estudio, target_name=OBJETIVO),
+        "valores_intermedios": visualizacion.plot_intermediate_values(estudio),
+    }
+
+
 def figuras_estudio(estudio: optuna.Study) -> dict[str, Figure]:
-    figuras = {nombre: dibujar(estudio).figure for nombre, dibujar in FIGURAS_OPTUNA.items()}
-    for figura in figuras.values():
-        figura.set_size_inches(11, 5.5)
+    figuras = {}
+    for nombre, eje in dibujar_estudio(estudio).items():
+        titulo, eje_x, eje_y = TEXTOS_FIGURAS[nombre]
+        eje.set_title("", loc="left")
+        eje.set(title=titulo, xlabel=eje_x, ylabel=eje_y)
+        leyenda = eje.get_legend()
+        for texto in leyenda.get_texts() if leyenda else []:
+            texto.set_text(texto.get_text().replace("Best Value", "Mejor hasta ahora").replace("Trial", "Prueba "))
+        eje.figure.set_size_inches(11, 5.5)
+        figuras[nombre] = eje.figure
     return figuras

@@ -5,9 +5,10 @@ from pathlib import Path
 import optuna
 import torch
 import torch.nn as nn
+from matplotlib.text import Text
 from torch.utils.data import DataLoader, TensorDataset
 
-from fishcls.ajuste import configuracion_sugerida, informar_a_optuna
+from fishcls.ajuste import configuracion_sugerida, figuras_estudio, informar_a_optuna
 from fishcls.entrenamiento import ParadaTemprana, entrenar
 from fishcls.experimento import cargar_configuracion, guardar_configuracion
 from fishcls.utilidades import cargar_json
@@ -65,6 +66,22 @@ class AlTerminarEpocaTest(unittest.TestCase):
         estudio = optuna.create_study(pruner=optuna.pruners.ThresholdPruner(upper=-1.0))
         with self.assertRaises(optuna.TrialPruned):
             self.entrenar_tres_epocas(informar_a_optuna(estudio.ask()))
+
+
+class FigurasEstudioTest(unittest.TestCase):
+    def test_las_figuras_no_dejan_textos_en_ingles(self):
+        def objetivo(prueba: optuna.Trial) -> float:
+            valor = prueba.suggest_float("dropout", 0.0, 0.5) + prueba.suggest_int("bloques", 3, 5)
+            prueba.report(valor, 1)
+            return valor
+
+        estudio = optuna.create_study(sampler=optuna.samplers.RandomSampler(seed=0))
+        estudio.optimize(objetivo, n_trials=8)
+        figuras = figuras_estudio(estudio)
+        textos = [texto.get_text() for figura in figuras.values() for texto in figura.findobj(Text)]
+        en_ingles = ("Trial", "Value", "Plot", "Hyperparameter")
+        self.assertEqual(set(figuras), {"historia", "importancia", "coordenadas_paralelas", "valores_intermedios"})
+        self.assertEqual([texto for texto in textos if any(palabra in texto for palabra in en_ingles)], [])
 
 
 if __name__ == "__main__":
