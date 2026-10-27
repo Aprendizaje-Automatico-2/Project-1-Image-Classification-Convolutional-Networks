@@ -14,22 +14,25 @@ Detecta automáticamente NVIDIA CUDA, AMD ROCm, Apple Silicon (MPS), Intel XPU o
 ## Uso
 
 ```bash
-python -m fishcls preparar         # agrupa casi duplicados, divide 70/15/15 por grupos y redimensiona a 300×400
+python -m fishcls preparar         # agrupa casi duplicados, divide 70/15/15 por grupos y redimensiona a 400×300
 python -m fishcls ver-aumentado    # figuras del data augmentation en resultados/figuras/
-python -m fishcls entrenar configuraciones/cnn/C01_base.json   # uno o varios experimentos
-python -m fishcls comparar C00_sin_aumentado C01_base --titulo "Con y sin DA" --salida comparativa
-python -m fishcls resumir 'C.*' --referencia C01_base --titulo "Búsqueda manual" --salida busqueda
-python -m fishcls entrenar configuraciones/transferencia/T02_convnext_tiny.json   # transfer learning
+python -m fishcls entrenar configuraciones/cnn/*.json   # búsqueda manual; acepta uno o varios experimentos
+python -m fishcls comparar C00_sin_aumentado C01_base --titulo "Efecto del data augmentation en el sobreajuste" --salida fase2_con_y_sin_aumentado
+python -m fishcls resumir 'C.*' --referencia C01_base --titulo "Búsqueda manual" --salida fase3_busqueda_manual
 python -m fishcls ajustar --pruebas 30   # Optuna; escribe configuraciones/optuna/O01_optuna_mejor.json
-python -m fishcls evaluar C10a_cuatro_bloques_dos_fc T02_convnext_tiny --titulo "Finalistas en test" --salida test   # una sola vez, al final
-python -m fishcls gradcam C10a_cuatro_bloques_dos_fc T02_convnext_tiny --salida gradcam   # qué mira cada red en test
-python -m fishcls tapar-fecha C10a_cuatro_bloques_dos_fc T02_convnext_tiny --titulo "Fecha tapada" --salida fecha   # ¿usa la red la fecha impresa?
+python -m fishcls entrenar configuraciones/optuna/O01_optuna_mejor.json configuraciones/transferencia/*.json
+python -m fishcls evaluar C10a_cuatro_bloques_dos_fc O01_optuna_mejor T01c_resnet18_dos_fases T02_convnext_tiny \
+    --titulo "Finalistas en test" --salida fase6_test   # una sola vez, al final
+python -m fishcls gradcam C10a_cuatro_bloques_dos_fc O01_optuna_mejor T01c_resnet18_dos_fases T02_convnext_tiny \
+    --salida fase6_gradcam   # qué mira cada red en test
+python -m fishcls tapar-fecha C10a_cuatro_bloques_dos_fc O01_optuna_mejor T01c_resnet18_dos_fases T02_convnext_tiny \
+    --titulo "Test con la fecha impresa tapada" --salida fase6_tapar_fecha   # ¿usan las redes la fecha impresa?
 python -m unittest discover tests
 ```
 
 ## Datos
 
-- **Origen:** las imágenes originales van en `data/Fish_Dataset/<clase>/` y no se versionan. Trout queda excluida porque solo tiene 30 imágenes y el enunciado pide al menos 50 por clase.
+- **Origen:** las fotos originales son las de la carpeta `NA_Fish_Dataset` del dataset de Kaggle. Cada clase va en `data/Fish_Dataset/<clase>/`, que no se versiona. Trout se deja fuera, en `data/excluded/`, porque solo tiene 30 imágenes y el enunciado pide al menos 50 por clase.
 - **Partición:** [`particion.json`](particion.json) guarda, para cada imagen, su grupo de casi duplicados y su partición. Ningún grupo aparece en dos particiones.
 - **Data augmentation:** se aplica al vuelo y solo a entrenamiento.
 
@@ -45,11 +48,11 @@ fishcls/
   entrenamiento.py  ParadaTemprana, bucle de entrenamiento y validación
   evaluacion.py   métricas, classification report e intervalo de Wilson
   experimento.py  configuración → datos → modelo → entrenamiento → resultados; recarga y evaluación en test
-  ajuste.py       búsqueda automática con Optuna (TPE + poda por mediana) sobre la ConvNet
+  ajuste.py       búsqueda automática con Optuna (TPE + poda por mediana) sobre la ConvNet y figuras del estudio
   interpretacion.py  Grad-CAM sobre la última capa convolucional y test con la fecha impresa tapada
   graficas.py     figuras
 configuraciones/  un JSON por experimento (cnn/, transferencia/ y optuna/), solo con lo que cambia respecto a los valores por defecto
 tests/            unittest
 ```
 
-Cada experimento guarda en `resultados/experimentos/<nombre>/` su configuración, su historial por época, sus métricas, el mejor modelo, las curvas de pérdida y accuracy y la matriz de confusión de validación. `resultados/resumen.csv` acumula una fila por experimento.
+Cada experimento guarda en `resultados/experimentos/<nombre>/` su configuración, su historial por época, sus métricas, el mejor modelo, las curvas de pérdida y accuracy y la matriz de confusión de validación; `evaluar` añade las métricas y la matriz de confusión de test. `resultados/resumen.csv` acumula una fila por experimento.
