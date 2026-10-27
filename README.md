@@ -40,19 +40,43 @@ python -m unittest discover tests
 
 ```
 fishcls/
-  config.py       rutas y constantes
-  utilidades.py   dispositivo, semillas, JSON
-  datos.py        catálogo, agrupado, partición, preparación y DataLoaders
-  aumentado.py    transformaciones de entrenamiento y evaluación
-  modelos.py      ConvNet configurable (parte de la red de la asignatura) y ResNet18 / ConvNeXt-Tiny preentrenadas
-  entrenamiento.py  ParadaTemprana, bucle de entrenamiento y validación
-  evaluacion.py   métricas, classification report e intervalo de Wilson
-  experimento.py  configuración → datos → modelo → entrenamiento → resultados; recarga y evaluación en test
-  ajuste.py       búsqueda automática con Optuna (TPE + poda por mediana) sobre la ConvNet y figuras del estudio
-  interpretacion.py  Grad-CAM sobre la última capa convolucional y test con la fecha impresa tapada
-  graficas.py     figuras
-configuraciones/  un JSON por experimento (cnn/, transferencia/ y optuna/), solo con lo que cambia respecto a los valores por defecto
-tests/            unittest
+  __main__.py            argumentos de cada comando
+  comandos.py            lo que hace cada comando
+  config.py              rutas y constantes
+  utilidades.py          dispositivo, semillas y JSON
+  preparacion/           de las fotos originales a data/preparados/ y particion.json (comando preparar)
+    imagenes.py          listar, abrir con la orientación EXIF en RGB y reducir a 400×300
+    duplicados.py        huella perceptual y grupos de casi duplicados
+    particion.py         partición 70/15/15 estratificada y por grupos
+    preparar.py          ejecuta los pasos anteriores y resume la partición
+  datos/                 de las imágenes preparadas a los DataLoader
+    aumentado.py         data augmentation de entrenamiento y transformaciones de evaluación
+    cargadores.py        DataLoader de entrenamiento, validación y test
+  modelos/
+    convnet.py           ConvNet configurable (parte de la red de la asignatura)
+    preentrenados.py     ResNet18 y ConvNeXt-Tiny con cabeza nueva y extractor congelable
+    medidas.py           número de parámetros y milisegundos por imagen
+  entrenamiento/
+    parada_temprana.py   ParadaTemprana
+    bucle.py             bucle de entrenamiento y validación
+  experimentos/
+    configuracion.py     ConfiguracionExperimento, su JSON y el modelo que describe
+    ejecucion.py         entrena un experimento de principio a fin
+    resultados.py        guarda y carga los resultados y resultados/resumen.csv
+    ajuste.py            búsqueda con Optuna (TPE y poda por mediana) y sus figuras
+  evaluacion/
+    metricas.py          accuracy, F1 macro, classification report e intervalo de Wilson
+    finalistas.py        evaluación en test
+    gradcam.py           Grad-CAM sobre la última capa convolucional
+    fecha.py             test con la fecha impresa tapada
+  graficas/
+    comun.py             guardar figuras y mostrar imágenes
+    curvas.py            curvas de pérdida y accuracy
+    comparativas.py      barras y accuracy frente a parámetros
+    imagenes.py          data augmentation y cuadrículas de Grad-CAM
+    matriz_confusion.py  matriz de confusión
+configuraciones/         un JSON por experimento (cnn/, transferencia/ y optuna/), solo con lo que cambia
+tests/                   un fichero de unittest por módulo
 ```
 
 Cada experimento guarda en `resultados/experimentos/<nombre>/` su configuración, su historial por época, sus métricas, el mejor modelo, las curvas de pérdida y accuracy y la matriz de confusión de validación; `evaluar` añade las métricas y la matriz de confusión de test. `resultados/resumen.csv` acumula una fila por experimento.
