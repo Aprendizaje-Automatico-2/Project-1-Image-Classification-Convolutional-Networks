@@ -64,6 +64,7 @@ class ParticionRealTest(unittest.TestCase):
         particion = [registro["particion"] for registro in self.registros]
         self.assertTrue(all(len(vistas) == 1 for vistas in particiones_por_grupo(grupos, particion).values()))
 
+    @unittest.skipUnless(DATOS_PREPARADOS.exists(), "ejecuta antes: python -m fishcls preparar")
     def test_las_imagenes_preparadas_existen_en_su_particion(self):
         for registro in self.registros:
             self.assertIn(f"/{registro['particion']}/{registro['clase']}/", registro["preparada"])
